@@ -1,6 +1,7 @@
 ## 关于Vue下组件引入第三方外部外链Js几种方式
 https://blog.csdn.net/u010881899/article/details/80895661
 
+使用方法： 可以将matser分支代码同步到github上面，想要部署到github.io上面只需要执行命令npm run d (实际上部署的分支是gh-page，该分支是打包过后的代码)
 ## nginx一键配置
 https://nginxconfig.io/
 
