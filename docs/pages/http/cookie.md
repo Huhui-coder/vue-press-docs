@@ -66,6 +66,21 @@ Domain 和 Path 标识共同定义了 Cookie 的作用域：即 Cookie 应该发
 http-only 无法被网页脚本读取，不限制传输通路的安全性（document.cookie）
 secure 可以被网页脚本读取，只允许通过安全通路发送给服务器(只能通过https)
 
+注意： `SameSite`
+
+1. **Strict** 仅允许一方请求携带 Cookie，即浏览器将只发送相同站点请求的 Cookie，即当前网页 URL 与请求目标 URL 完全一致。
+2. **Lax** 允许部分第三方请求携带 Cookie。
+3. **None** 无论是否跨站都会发送 Cookie。
+
+新版本Chrome默认策略是把SameSite设置为Lax，为了避免网站受影响，许多人想到的最简单的方法就是设置SameSite属性为None。不过有些老版本浏览器并不识别值为None的情况，所以一般服务端需要这么设置：
+
+```text
+Set-cookie: key=value; SameSite=None; Secure
+Set-cookie: key=value; Secure
+```
+
+另外一点需要注意的是当设置SameSite=None时，必须同时设置Secure属性。表示只有在 HTTPS 协议下该 Cookie 才会被发送。
+
 ## 服务端操作cookie示例：(express WEB框架)
 
 ```jsx
@@ -180,4 +195,3 @@ axios.defaults.withCredentials = true
 ![image-20200527113514398](https://tva1.sinaimg.cn/large/007S8ZIlly1gf6yzszudfj31iu0h2jwc.jpg)
 
 前端vue直接通过`js-cookie`npm 库就可以直接操作cookie了。
-
