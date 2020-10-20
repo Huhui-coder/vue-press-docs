@@ -1,6 +1,6 @@
 module.exports = {
     base: '/vue-press-docs/', // 比如你的仓库是test
-    title: 'Hit前端首页', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    title: '走路人', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: 'Hit的前端笔记', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
@@ -20,6 +20,7 @@ module.exports = {
                 ariaLabel: '分类',
                 items: [
                     { text: 'http系列', link: '/pages/http/cookie.md' },
+                    { text: 'javaScript系列', link: '/pages/javaScript/Object.freeze()和const.md' },
                     { text: '文章', link: '/pages/folder1/test1.md' },
                     { text: '琐碎', link: '/pages/folder2/test4.md' },
                 ]
@@ -35,6 +36,16 @@ module.exports = {
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
                         ['cookie.md', 'cookie']
+                    ]
+                }
+            ],
+            '/pages/javaScript/':[
+                {
+                    title: 'Object.freeze()和const',   // 必要的
+                    collapsable: false, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['Object.freeze()和const.md', 'Object.freeze()和const']
                     ]
                 }
             ],
