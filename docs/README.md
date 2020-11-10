@@ -4,14 +4,14 @@ heroImage: /egg.png
 heroText: Hit的前端笔记
 tagline: 一点一滴都是进步
 actionText: 马上进入 →
-actionLink: /pages/folder1/test1.md
+actionLink: /pages/javaScript/Object.freeze()和const.md
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 日常积累
+  details: 每周一到两篇的文章产出。
+- title: 范围全面
+  details: 囊括前端方方面面，包含前端基础，前端工程化以及后端node相关。
+- title: 内容全面
+  details: 不仅仅是基础知识，相关的项目开发经验，面试经验，都会记录在本文档中。
 ---
 
 <!-- <ClientOnly>

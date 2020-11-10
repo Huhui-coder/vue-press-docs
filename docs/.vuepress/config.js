@@ -19,40 +19,126 @@ module.exports = {
                 text: '分类',
                 ariaLabel: '分类',
                 items: [
-                    { text: 'http系列', link: '/pages/http/cookie.md' },
+                    { text: 'html系列', link: '/pages/html/html.md' },
+                    { text: 'css系列', link: '/pages/css/css.md' },
                     { text: 'javaScript系列', link: '/pages/javaScript/Object.freeze()和const.md' },
-                    { text: '文章', link: '/pages/folder1/test1.md' },
-                    { text: '琐碎', link: '/pages/folder2/test4.md' },
+                    { text: 'http系列', link: '/pages/http/cookie.md' },
+                    { text: '前端工程化系列', link: '/pages/project/project.md' },
+                    { text: 'node系列', link: '/pages/node/node.md' },
+                    { text: '浏览器系列', link: '/pages/browser/browser.md' },
+                    { text: '框架使用系列', link: '/pages/framework/framework.md' },
+                    { text: '框架源码系列', link: '/pages/framework-source/framework-source.md' },
+                    { text: '性能优化系列', link: '/pages/optimization/vue-code.md' },
                 ]
             },
-            { text: '功能演示', link: '/pages/folder1/test3.md' },
             { text: 'Github', link: 'https://github.com/Huhui-coder' },
         ],
         sidebar: {
+            '/pages/html/':[
+                {
+                    title: 'html',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['html.md', 'html']
+                    ]
+                }
+            ],
+            '/pages/css/':[
+                {
+                    title: 'css',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['css.md', 'css']
+                    ]
+                }
+            ],
             '/pages/http/':[
                 {
                     title: 'cookie',   // 必要的
-                    collapsable: false, // 可选的, 默认值是 true,
+                    collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
                         ['cookie.md', 'cookie']
                     ]
                 }
             ],
+            '/pages/project/':[
+                {
+                    title: '前端工程化',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['project.md', 'webpack']
+                    ]
+                }
+            ],
             '/pages/javaScript/':[
                 {
                     title: 'Object.freeze()和const',   // 必要的
-                    collapsable: false, // 可选的, 默认值是 true,
+                    collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
                         ['Object.freeze()和const.md', 'Object.freeze()和const']
                     ]
                 }
             ],
+            '/pages/node/':[
+                {
+                    title: 'node',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['node.md', 'node']
+                    ]
+                }
+            ],
+            '/pages/browser/':[
+                {
+                    title: '浏览器',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['browser.md', '前端攻击技术']
+                    ]
+                }
+            ],
+            '/pages/framework/':[
+                {
+                    title: '框架使用',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['framework.md', 'vue']
+                    ]
+                }
+            ],
+            '/pages/framework-source/':[
+                {
+                    title: '框架源码',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['framework-source.md', 'vue']
+                    ]
+                }
+            ],
+            '/pages/optimization/':[
+                {
+                    title: '性能优化',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['vue-code.md', 'vue代码层面'],
+                        ['webpack.md', 'webpack配置层面']
+                    ]
+                }
+            ],
             '/pages/folder1/':[
                 {
                     title: '测试菜单1',   // 必要的
-                    collapsable: false, // 可选的, 默认值是 true,
+                    collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
                         ['test1.md', '子菜单1'],
@@ -61,7 +147,7 @@ module.exports = {
                 },
                 {
                     title: '测试菜单2',
-                    collapsable: false, // 可选的, 默认值是 true,
+                    collapsable: true, // 可选的, 默认值是 true,
                     children: [
                         ['test2.md', '子菜单1']
                     ]
