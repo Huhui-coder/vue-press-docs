@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /egg.png
+heroImage: /hit.JPG
 heroText: Hit的前端笔记
 tagline: 一点一滴都是进步
 actionText: 马上进入 →

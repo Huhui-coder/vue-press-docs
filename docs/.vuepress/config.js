@@ -1,17 +1,17 @@
 module.exports = {
     base: '/vue-press-docs/', // 比如你的仓库是test
-    title: '走路人', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    title: '菜鸡前端的自我拯救', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: 'Hit的前端笔记', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
-        ['link', { rel: 'icon', href: '/egg.png' }],  //浏览器的标签栏的网页图标
+        ['link', { rel: 'icon', href: '/hit.JPG' }],  //浏览器的标签栏的网页图标
     ],
     markdown: {
         lineNumbers: true
     },
     serviceWorker: true,
     themeConfig: {    
-        logo: '/egg.png',
+        logo: '/hit.JPG',
         lastUpdated: 'lastUpdate', // string | boolean
         nav: [
             { text: '首页', link: '/' },
@@ -47,10 +47,26 @@ module.exports = {
             '/pages/css/':[
                 {
                     title: 'css',   // 必要的
-                    collapsable: true, // 可选的, 默认值是 true,
+                    collapsable: false, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['css.md', 'css']
+                    ]
+                },
+                {
+                    title: 'grid',   // 必要的
+                    collapsable: false, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['grid.md', 'grid']
+                    ]
+                },
+                {
+                    title: 'flex',   // 必要的
+                    collapsable: false, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['flex.md', 'flex']
                     ]
                 }
             ],
