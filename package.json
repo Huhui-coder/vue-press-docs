@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vuepress dev docs",        
-    "build": "vuepress build docs",      
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "d": "bash deploy.sh"
   },
   "repository": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Huhui-coder/vue-press-docs#readme",
   "devDependencies": {
-    "vuepress": "^1.4.1"
+    "vuepress": "^1.4.1",
+    "vuepress-plugin-demo-container": "^0.2.0"
   }
 }

@@ -380,3 +380,5 @@ var bindFoo = bar.bind2(foo, 'daisy');
 var obj = new bindFoo(23)
 console.log(obj.friend) // kevin
 ```
+
+[参考文档](https://juejin.im/post/6844903496253177863)

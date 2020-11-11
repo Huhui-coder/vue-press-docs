@@ -9,6 +9,7 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    plugins: ['demo-container'],
     serviceWorker: true,
     themeConfig: {    
         logo: '/hit.JPG',
@@ -26,7 +27,7 @@ module.exports = {
                     { text: '前端工程化系列', link: '/pages/project/project.md' },
                     { text: 'node系列', link: '/pages/node/node.md' },
                     { text: '浏览器系列', link: '/pages/browser/browser.md' },
-                    { text: '框架使用系列', link: '/pages/framework/framework.md' },
+                    { text: '框架使用系列', link: '/pages/framework/nextTick.md' },
                     { text: '框架源码系列', link: '/pages/framework-source/framework-source.md' },
                     { text: '性能优化系列', link: '/pages/optimization/vue-code.md' },
                 ]
@@ -135,7 +136,7 @@ module.exports = {
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
-                        ['framework.md', 'vue']
+                        ['nextTick.md', 'nextTick']
                     ]
                 }
             ],
