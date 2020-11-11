@@ -98,6 +98,15 @@ module.exports = {
                     children: [
                         ['Object.freeze()和const.md', 'Object.freeze()和const']
                     ]
+                },
+                {
+                    title: '手写系列',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        ['source-write-call.md', 'call,apply,bind'],
+                        ['source-write-promise.md', 'promise']
+                    ]
                 }
             ],
             '/pages/node/':[
