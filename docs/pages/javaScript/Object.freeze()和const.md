@@ -28,20 +28,20 @@ PI = PI + 10;   // 也会出错
 
 ### 常量对象可以更改
 
-您可以更改常量对象(or数组)的属性：
+你可以更改常量对象(or数组)的属性：
 
 ```js
-// 您可以创建 const 对象：
+// 你可以创建 const 对象：
 const car = {type:"porsche", model:"911", color:"Black"};
 
-// 您可以更改属性：
+// 你可以更改属性：
 car.color = "White";
 
-// 您可以添加属性：
+// 你可以添加属性：
 car.owner = "Bill";
 ```
 
-但是您无法重新为常量(or数组)对象赋值：
+但是你无法重新为常量(or数组)对象赋值：
 
 ```js
 const car = {type:"porsche", model:"911", color:"Black"};
@@ -62,7 +62,6 @@ car = {type:"Volvo", model:"XC60", color:"White"};    // ERROR
 carName = "Volvo";    // error
 const carName;
 ```
-
 
 
 ## 暂时性死区：
@@ -118,7 +117,7 @@ document.write(obj.person.person_name) // hh
 
 ## 如何实现深冻结
 
-"深冻结"要完全冻结具有嵌套属性的对象，您可以编写自己的库或使用已有的库来冻结对象，如[Deepfreeze](https://github.com/substack/deep-freeze)或[immutable-js](https://github.com/immutable-js/immutable-js)
+"深冻结"要完全冻结具有嵌套属性的对象，你可以编写自己的库或使用已有的库来冻结对象，如[Deepfreeze](https://github.com/substack/deep-freeze)或[immutable-js](https://github.com/immutable-js/immutable-js)
 
 ```
 // 深冻结函数.

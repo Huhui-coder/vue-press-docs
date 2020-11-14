@@ -39,7 +39,7 @@ module.exports = {
                 {
                     title: 'html',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['html.md', 'html']
                     ]
@@ -49,7 +49,7 @@ module.exports = {
                 {
                     title: 'css',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    sidebarDepth: 100,    // 可选的, 默认值是 1
                     children: [
                         ['css.md', 'css']
                     ]
@@ -57,7 +57,7 @@ module.exports = {
                 {
                     title: 'grid',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    sidebarDepth: 100,    // 可选的, 默认值是 1
                     children: [
                         ['grid.md', 'grid']
                     ]
@@ -65,7 +65,7 @@ module.exports = {
                 {
                     title: 'flex',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    sidebarDepth: 100,    // 可选的, 默认值是 1
                     children: [
                         ['flex.md', 'flex']
                     ]
@@ -75,7 +75,7 @@ module.exports = {
                 {
                     title: 'cookie',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['cookie.md', 'cookie']
                     ]
@@ -85,7 +85,7 @@ module.exports = {
                 {
                     title: '前端工程化',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['project.md', 'webpack']
                     ]
@@ -95,15 +95,25 @@ module.exports = {
                 {
                     title: 'Object.freeze()和const',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['Object.freeze()和const.md', 'Object.freeze()和const']
                     ]
                 },
                 {
+                    title: 'ES6',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['let.md', 'let 与 const'],
+                        ['defineProperty.md', 'defineProperty 与 proxy'],
+                        ['Generator.md', 'Generator']
+                    ]
+                },
+                {
                     title: '手写系列',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['source-write-call.md', 'call,apply,bind'],
                         ['source-write-promise.md', 'promise']
@@ -114,7 +124,7 @@ module.exports = {
                 {
                     title: 'node',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['node.md', 'node']
                     ]
@@ -124,9 +134,10 @@ module.exports = {
                 {
                     title: '浏览器',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
-                        ['browser.md', '前端攻击技术']
+                        ['browser.md', '前端攻击技术'],
+                        ['storage.md', '前端存储技术']
                     ]
                 }
             ],
@@ -134,7 +145,7 @@ module.exports = {
                 {
                     title: '框架使用',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['nextTick.md', 'nextTick']
                     ]
@@ -144,7 +155,7 @@ module.exports = {
                 {
                     title: '框架源码',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['framework-source.md', 'vue']
                     ]
@@ -154,8 +165,9 @@ module.exports = {
                 {
                     title: '性能优化',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
+                        ['性能优化关键要素.md', '性能优化关键要素'],
                         ['vue-code.md', 'vue代码层面'],
                         ['webpack.md', 'webpack配置层面']
                     ]
@@ -165,7 +177,7 @@ module.exports = {
                 {
                     title: '测试菜单1',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['test1.md', '子菜单1'],
                         ['test3.md', '子菜单2']
