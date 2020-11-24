@@ -30,6 +30,7 @@ module.exports = {
                     { text: '框架使用系列', link: '/pages/framework/nextTick.md' },
                     { text: '框架源码系列', link: '/pages/framework-source/framework-source.md' },
                     { text: '性能优化系列', link: '/pages/optimization/vue-code.md' },
+                    { text: '前端做直播', link: '/pages/live/live.md' },
                 ]
             },
             { text: 'Github', link: 'https://github.com/Huhui-coder' },
@@ -68,6 +69,14 @@ module.exports = {
                     sidebarDepth: 100,    // 可选的, 默认值是 1
                     children: [
                         ['flex.md', 'flex']
+                    ]
+                },
+                {
+                    title: 'css预处理器',   // 必要的
+                    collapsable: false, // 可选的, 默认值是 true,
+                    sidebarDepth: 100,    // 可选的, 默认值是 1
+                    children: [
+                        ['less.md', 'less']
                     ]
                 }
             ],
@@ -188,6 +197,16 @@ module.exports = {
                     collapsable: true, // 可选的, 默认值是 true,
                     children: [
                         ['test2.md', '子菜单1']
+                    ]
+                }
+            ],
+            '/pages/live/':[
+                {
+                    title: 'live',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['live.md', 'live']
                     ]
                 }
             ],
