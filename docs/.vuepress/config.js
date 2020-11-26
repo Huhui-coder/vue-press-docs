@@ -106,7 +106,7 @@ module.exports = {
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
-                        ['Object.freeze()和const.md', 'Object.freeze()和const']
+                        ['Object.freeze()和const.md', 'Object.freeze()&const']
                     ]
                 },
                 {
