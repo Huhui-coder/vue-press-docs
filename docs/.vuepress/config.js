@@ -50,7 +50,7 @@ module.exports = {
                 {
                     title: 'css',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 100,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['css.md', 'css']
                     ]
@@ -58,7 +58,7 @@ module.exports = {
                 {
                     title: 'grid',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 100,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['grid.md', 'grid']
                     ]
@@ -66,7 +66,7 @@ module.exports = {
                 {
                     title: 'flex',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 100,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['flex.md', 'flex']
                     ]
@@ -74,7 +74,7 @@ module.exports = {
                 {
                     title: 'css预处理器',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
-                    sidebarDepth: 100,    // 可选的, 默认值是 1
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['less.md', 'less']
                     ]
