@@ -1,7 +1,7 @@
 ### 描述下从浏览器输入URL到页面展示所经过的一系列流程
 ### TCP/IP协议族 
 是啥？
-它是一个有关互联网相关联的所有协议的集合。包括常见的 http ftp udp tcp ip icmp pppoe dns snmp
+它是一个有关互联网相关联的所有协议的集合。包括常见的 HTTP FTP UDP TCP IP ICMP PPPoE DNS SNMP
 有啥特点？
 它具备分层管理的特点，分为以下四层： 应用层、传输层、网络层和数据链路层。
 分成管理的好处？
@@ -53,7 +53,7 @@ TCP() 位于传输层，提供可靠的字节流服务。
 DNS(Domain Name System) 主要负责域名解析(域名到IP)，位于应用层。
 
 ## 为何会出现两次请求，一次为正常的get 或者 post 一次为 options
-[options请求](http://blog.itpub.net/69955379/viewspace-2729362/)
+[options请求](HTTP://blog.itpub.net/69955379/viewspace-2729362/)
 
 ## 请求报文的组成
 请求方法、请求URL、协议版本、可选的请求首部字段和内容实体组成。
@@ -76,14 +76,14 @@ DNS(Domain Name System) 主要负责域名解析(域名到IP)，位于应用层�
 这样就可以做到同时并行发送多个请求，而不需要一个接一个地等到响应了。
 
 
-## http 通信过程
+## HTTP 通信过程
 ### HTTP 方法
 ### 协议格式
 ### 报文结构
 ### 首部字段
 ### 状态码
 ### HTTP通信过程中代理、网关、隧道等的作用
-## http 安全
+## HTTP 安全
 ### HTTPS 
 ### SSL
 ### 证书认证
