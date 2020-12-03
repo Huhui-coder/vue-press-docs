@@ -82,6 +82,14 @@ module.exports = {
             ],
             '/pages/http/':[
                 {
+                    title: 'http协议',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['http.md', 'http']
+                    ]
+                },
+                {
                     title: 'cookie',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1

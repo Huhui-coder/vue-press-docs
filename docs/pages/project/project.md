@@ -250,7 +250,9 @@ webpack.DllPlugin：抽取第三方 js，使用 dll 打包，笔者会在之后 
 
 可以将一些公用包提取出来使用 cdn 引入，不打入 bundle 中：
 
-## 配置 tree-shaking
+
+## 常见配置项
+### 配置 tree-shaking
 
 能够在模块的层面上做到打包后的代码只包含被引用并被执行的模块，而不被引用或不被执行的模块被删除掉，以起到减包的效果。
 在生产环境下，webpack 自动开启了 tree-shaking 无需更多的配置。
@@ -278,7 +280,7 @@ webpack.DllPlugin：抽取第三方 js，使用 dll 打包，笔者会在之后 
 ]
 ```
 
-### tree-shaking 的局限性
+#### tree-shaking 的局限性
 
 - 只能是静态声明和引用的 ES6 模块，不能是动态引入和声明的。
 
@@ -298,8 +300,6 @@ CommonJS 是动态的，模块的依赖关系建立在代码运行阶段。
 
 - 只能处理模块级别，不能处理函数级别的冗余；
 - 只能处理 JS 相关冗余代码，不能处理 CSS 冗余代码。
-
-## 常见配置项
 
 ### node 模块中的 path.join 与 path.resolve 之间的区别
 
