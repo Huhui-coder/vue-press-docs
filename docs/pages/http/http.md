@@ -55,7 +55,7 @@ TCP() 位于传输层，提供可靠的字节流服务。
 
 如果说，这个握手过程因为不知名的原因**中断**了，那么 TCP 会**再次**以相同的顺序发送相同数据包。
 ![TCP三次握手](https://blog.jiar.me/2017/08/11/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E7%AE%80%E4%BB%8B/tcp_hand_shake_detail.png)
-[TCP三次握手](https://blog.jiar.me/2017/08/11/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E7%AE%80%E4%BB%8B/)
+[TCP 三次握手](https://blog.jiar.me/2017/08/11/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E7%AE%80%E4%BB%8B/)
 
 - 字节流
   所谓的字节流，就是将收到的 **HTTP 请求报文数据**分割成以`报文段`作为单位的`数据包`。
@@ -65,16 +65,18 @@ TCP() 位于传输层，提供可靠的字节流服务。
 DNS(Domain Name System) 主要负责域名解析(域名到 IP)，位于应用层。
 
 ## 为何会出现两次请求，一次为正常的 get 或者 post 一次为 options
-为什么会多一次的options 请求？
+
+为什么会多一次的 options 请求？
 三种情况会出现 `options`的预请求。
-- 在HTTP头部添加了自定义字段，此时该HTTP请求变为复杂请求。
+
+- 在 HTTP 头部添加了自定义字段，此时该 HTTP 请求变为复杂请求。
 - 在前后端交互过程中出现了跨域的情况。
-- 请求头的content-type参数：application/x-www-form-urlencoded，multipart/form-data，text/plain之外的格式。
+- 请求头的 content-type 参数：application/x-www-form-urlencoded，multipart/form-data，text/plain 之外的格式。
 
 之所以会有`options`请求,目的就是去服务器检查一下接下来要到用的方法(GET、POST、PUT、detele)在服务器上是否支持。
 
 只有当预请求返回**200** 之后,才会进行接下来的正常请求。
-如何避免多次出现`options`请求，在服务器端我们可以在options返回是做一次options缓存，告知前端以后在此请求这个接口就不要在发options了，服务器响应时可设置 `Access-Control-Max-Age`的时间，默认10分钟;
+如何避免多次出现`options`请求，在服务器端我们可以在 options 返回是做一次 options 缓存，告知前端以后在此请求这个接口就不要在发 options 了，服务器响应时可设置 `Access-Control-Max-Age`的时间，默认 10 分钟;
 
 [options 请求](https://juejin.cn/post/6855989328876617736)
 
@@ -91,8 +93,10 @@ DNS(Domain Name System) 主要负责域名解析(域名到 IP)，位于应用层
 [RESTful](https://cloud.tencent.com/developer/article/1519246)
 
 ## HTTP 是无状态的协议
+
 无状态协议指的是无法根据之前的请求状态来处理现在这次的请求。
 使用`cookie`来让每一次的请求，都具备`状态`.
+
 ## HTTP 的持久连接和管线化
 
 在 HTTP 的初始化版本中，每进行一次 HTTP 通信就要重新建立一次 TCP 连接，这样无疑增加了许多不必要的通信成本。
@@ -110,33 +114,38 @@ DNS(Domain Name System) 主要负责域名解析(域名到 IP)，位于应用层
 
 - 1XX (信息性状态码) 表示接收的请求正在处理。
 - 2XX (成功状态码) 表示正常处理完毕。
-- 3XX (重定向状态码) 表示需要进行附加操作以完成请求，[304除外]
+- 3XX (重定向状态码) 表示需要进行附加操作以完成请求，[304 除外]
 - 4XX (客户端错误状态码) 表示服务器无法处理请求
 - 5XX (服务器错误状态码) 表示服务器处理请求出错
 
 #### 2XX
+
 - 200 OK 请求成功
-- 204 No Content 请求成功，但返回的实体信息为null， 适用场景：只需要客户端往服务器发送信息，而不需要服务器返回新的信息。
-- 206 Partial Content 表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求。响应报文中包含了由 `Content-Range`指定范围的实体内容。
+- 204 No Content 请求成功，但返回的实体信息为 null， 适用场景：只需要客户端往服务器发送信息，而不需要服务器返回新的信息。
+- 206 Partial Content 表示客户端进行了范围请求，而服务器成功执行了这部分的 GET 请求。响应报文中包含了由 `Content-Range`指定范围的实体内容。
 
 #### 3XX
+
 - 301 Moved Permanently 永久性重定向。
 - 302 Found 临时性重定向。
-- 303 See Other 表示由于请求对应的资源存在另一个 URI,应使用 GET方法定向获取请求的资源。
+- 303 See Other 表示由于请求对应的资源存在另一个 URI,应使用 GET 方法定向获取请求的资源。
 - 304 Not Modified 表示服务器端资源未改变，可直接使用客户端未过期的资源。虽然在 3XX 系列状态码中，但是和重定向没啥关系。
 
-**注意** 当301，302，303响应状态码返回时，几乎所有的浏览器都会把POST改成GET,并删除请求报文内的主体，之后请求会再次发送。
+**注意** 当 301，302，303 响应状态码返回时，几乎所有的浏览器都会把 POST 改成 GET,并删除请求报文内的主体，之后请求会再次发送。
 
-- 307 Temporary Redirect 临时重定向，不会从POST变成 GET.
+- 307 Temporary Redirect 临时重定向，不会从 POST 变成 GET.
 
 #### 4XX
+
 - 401 Unauthorized 认证失败
 - 403 Forbidden 表示对请求资源的访问被服务器拒绝了。一般表示 Token 验证失败。
 - 404 Not Found 未找到。
 
 #### 5XX
+
 - 500 Internal Server Error 服务器内部错误
 - 503 Service Unavailable 表示服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。
+
 ## HTTP 通信过程
 
 ### HTTP 方法
