@@ -23,7 +23,7 @@ module.exports = {
                     { text: 'html系列', link: '/pages/html/html.md' },
                     { text: 'css系列', link: '/pages/css/css.md' },
                     { text: 'javaScript系列', link: '/pages/javaScript/Object.freeze()和const.md' },
-                    { text: 'http系列', link: '/pages/http/cookie.md' },
+                    { text: 'http系列', link: '/pages/http/http.md' },
                     { text: '前端工程化系列', link: '/pages/project/project.md' },
                     { text: 'node系列', link: '/pages/node/node.md' },
                     { text: '浏览器系列', link: '/pages/browser/browser.md' },
@@ -82,11 +82,12 @@ module.exports = {
             ],
             '/pages/http/':[
                 {
-                    title: 'http协议',   // 必要的
+                    title: 'http',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
-                        ['http.md', 'http']
+                        ['http.md', 'http协议'],
+                        ['http缓存.md', 'http缓存']
                     ]
                 },
                 {
@@ -134,6 +135,14 @@ module.exports = {
                     children: [
                         ['source-write-call.md', 'call,apply,bind'],
                         ['source-write-promise.md', 'promise']
+                    ]
+                },
+                {
+                    title: '实现继承',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['inherit.md', '实现继承']
                     ]
                 }
             ],
