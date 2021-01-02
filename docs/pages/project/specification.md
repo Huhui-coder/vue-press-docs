@@ -229,70 +229,11 @@ module.exports = {
 };
 ```
 
-```js
-// package.json
-{
-  "private": true,
-  "scripts": {
-    "start": "umi dev",
-    "build": "umi build",
-    "postinstall": "umi generate tmp",
-    "lint": "eslint --fix",
-    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "validate-commit-msg"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write",
-      "eslint --fix",
-      "git add ."
-    ]
-  },
-  "dependencies": {
-    "@ant-design/pro-layout": "^6.6.4",
-    "@umijs/preset-react": "1.x",
-    "@umijs/test": "^3.3.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "typescript": "^4.1.3",
-    "umi": "^3.3.2",
-    "validate-commit-msg": "^2.14.0",
-    "yorkie": "^2.0.0"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.11.1",
-    "eslint-plugin-promise": "^4.2.1",
-    "@typescript-eslint/parser": "^4.11.1",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.17.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.22.0",
-    "husky": "^4.3.6",
-    "lint-staged": "^10.5.3",
-    "prettier": "^1.19.1",
-    "@typescript-eslint/parser": "^2.23.0",
-    "eslint-config-airbnb-typescript": "^7.0.0",
-    "eslint-import-resolver-webpack": "^0.12.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
-  }
-}
+**注意**: 需要安装依赖
 
 ```
-
-**注意**: 需要安装依赖
+npm install @typescript-eslint/eslint-plugin eslint-plugin-promise @typescript-eslint/parser babel-eslint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-react @typescript-eslint/parser eslint-config-airbnb-typescript eslint-import-resolver-webpack  eslint-plugin-jsx-a11y eslint-plugin-react-hooks -D 
+``` 
 
 ### prettier 是什么？
 
@@ -591,6 +532,7 @@ Body 部分的格式是固定的，必须写成 This reverts commit &lt;hash>.�
     "start": "umi dev",
     "build": "umi build",
     "postinstall": "umi generate tmp",
+    "lint": "eslint --fix",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
@@ -602,7 +544,9 @@ Body 部分的格式是固定的，必须写成 This reverts commit &lt;hash>.�
     }
   },
   "lint-staged": {
-    "*.{js,jsx,less,md,json}": ["prettier --write"],
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
     "*.ts?(x)": [
       "prettier --parser=typescript --write",
       "eslint --fix",
@@ -611,10 +555,8 @@ Body 部分的格式是固定的，必须写成 This reverts commit &lt;hash>.�
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.6.4",
-    "@typescript-eslint/parser": "^4.11.1",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.3.2",
-    "eslint-plugin-promise": "^4.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "typescript": "^4.1.3",
@@ -624,6 +566,8 @@ Body 部分的格式是固定的，必须写成 This reverts commit &lt;hash>.�
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "@typescript-eslint/parser": "^4.11.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
@@ -632,7 +576,12 @@ Body 部分的格式是固定的，必须写成 This reverts commit &lt;hash>.�
     "eslint-plugin-react": "^7.22.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
 ```
