@@ -24,7 +24,7 @@ module.exports = {
                     { text: 'css系列', link: '/pages/css/css.md' },
                     { text: 'javaScript系列', link: '/pages/javaScript/Object.freeze()和const.md' },
                     { text: 'http系列', link: '/pages/http/http.md' },
-                    { text: '前端工程化系列', link: '/pages/project/project.md' },
+                    { text: '前端工程化系列', link: '/pages/project/webpack.md' },
                     { text: 'node系列', link: '/pages/node/node.md' },
                     { text: '浏览器系列', link: '/pages/browser/browser.md' },
                     { text: '框架使用系列', link: '/pages/framework/nextTick.md' },
@@ -105,7 +105,8 @@ module.exports = {
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
-                        ['project.md', 'webpack']
+                        ['specification.md', '代码规范'],
+                        ['webpack.md', 'webpack']
                     ]
                 }
             ],
