@@ -28,7 +28,7 @@ module.exports = {
                     { text: 'node系列', link: '/pages/node/node.md' },
                     { text: '浏览器系列', link: '/pages/browser/browser.md' },
                     { text: '框架使用系列', link: '/pages/framework/nextTick.md' },
-                    { text: '框架源码系列', link: '/pages/framework-source/framework-source.md' },
+                    { text: '框架源码系列', link: '/pages/framework-source/vue-source.md' },
                     { text: '性能优化系列', link: '/pages/optimization/vue-code.md' },
                     { text: '前端做直播', link: '/pages/live/live.md' },
                 ]
@@ -169,11 +169,19 @@ module.exports = {
             ],
             '/pages/framework/':[
                 {
-                    title: '框架使用',   // 必要的
+                    title: 'vue框架使用',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['nextTick.md', 'nextTick']
+                    ]
+                },
+                {
+                    title: 'react框架使用',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['hook.md', 'hook']
                     ]
                 }
             ],
@@ -183,7 +191,8 @@ module.exports = {
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
-                        ['framework-source.md', 'vue']
+                        ['vue-source.md', 'vue'],
+                        ['react-source.md', 'react']
                     ]
                 }
             ],
