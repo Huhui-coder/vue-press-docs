@@ -1,6 +1,6 @@
 module.exports = {
     base: '/vue-press-docs/', // 比如你的仓库是test
-    title: '菜鸡前端的自我拯救', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    title: 'Hit', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: 'Hit的前端笔记', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
@@ -24,7 +24,7 @@ module.exports = {
                     { text: 'css系列', link: '/pages/css/css.md' },
                     { text: 'javaScript系列', link: '/pages/javaScript/Object.freeze()和const.md' },
                     { text: 'http系列', link: '/pages/http/http.md' },
-                    { text: '前端工程化系列', link: '/pages/project/webpack.md' },
+                    { text: '前端工程化系列', link: '/pages/project/guide.md' },
                     { text: 'node系列', link: '/pages/node/node.md' },
                     { text: '浏览器系列', link: '/pages/browser/browser.md' },
                     { text: '框架使用系列', link: '/pages/framework/nextTick.md' },
@@ -105,7 +105,8 @@ module.exports = {
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
-                        ['specification.md', '代码规范'],
+                        ['guide.md', '代码规范'],
+                        ['specification.md', '项目配置'],
                         ['webpack.md', 'webpack']
                     ]
                 }

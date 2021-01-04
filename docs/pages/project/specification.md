@@ -1,9 +1,8 @@
-在编码规范这块儿需要做统一的有如下四个方面。
+在编码规范这块儿需要做统一的有如下三个方面。
 
 1. 跨平台开发时，配置统一的代码风格
 2. 前端业务开发的编码规范
-3. 前端代码提交前的格式检查和代码统一格式化
-4. 前端代码提交的 commit 信息格式校验
+3. 前端代码提交前的格式检查，代码统一格式化及前端代码提交的 commit msg 信息格式校验
 
 [示例项目仓库](https://github.com/Huhui-coder/unite-format-example)
 
@@ -58,9 +57,15 @@ indent_style = tab
 
 ## 前端业务开发的编码规范
 
-[html](https://juejin.cn/post/6844903843558326285)
+[京东-凹凸实验室](https://guide.aotu.io/docs/index.html)
 
-[Airbnb React/JSX 编码规范](https://github.com/sowee121/javascript/blob/master/react/README.md)
+[Airbnb JavaScript 风格指南](https://github.com/lin-123/javascript)
+
+[Airbnb React/JSX 风格指南](https://github.com/lin-123/javascript/tree/cn/react)
+
+[Airbnb CSS / Sass 指南](https://github.com/Zhangjd/css-style-guide#terminology)
+
+[Airbnb CSS-in-JavaScript Style Guide](https://github.com/lin-123/javascript/tree/cn/css-in-javascript)
 
 [vue](https://cn.vuejs.org/v2/style-guide/)
 
