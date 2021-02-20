@@ -1,10 +1,10 @@
 module.exports = {
     base: '/vue-press-docs/', // 比如你的仓库是test
-    title: 'Hit', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    title: '菜鸡前端的自我拯救', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: 'Hit的前端笔记', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
-        ['link', { rel: 'icon', href: '/hit.JPG' }],  //浏览器的标签栏的网页图标
+        ['link', { rel: 'icon', href: '/菜鸡前端的自我拯救.JPG' }],  //浏览器的标签栏的网页图标
     ],
     markdown: {
         lineNumbers: true
@@ -31,6 +31,7 @@ module.exports = {
                     { text: '框架源码系列', link: '/pages/framework-source/vue-source.md' },
                     { text: '性能优化系列', link: '/pages/optimization/vue-code.md' },
                     { text: '前端做直播', link: '/pages/live/live.md' },
+                    { text: '199管理类联考', link: '/pages/management/math.md' },
                 ]
             },
             { text: 'Github', link: 'https://github.com/Huhui-coder' },
@@ -235,6 +236,18 @@ module.exports = {
                     sidebarDepth: 10,    // 可选的, 默认值是 1
                     children: [
                         ['live.md', 'live']
+                    ]
+                }
+            ],
+            '/pages/management/':[
+                {
+                    title: '199管理类联考',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10,    // 可选的, 默认值是 1
+                    children: [
+                        ['math.md', '数学'],
+                        ['logic.md', '逻辑判断'],
+                        ['write.md', '写作']
                     ]
                 }
             ],
