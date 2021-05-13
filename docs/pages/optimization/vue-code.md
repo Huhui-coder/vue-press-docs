@@ -8,7 +8,7 @@
 
 ## computed 和 watch 区分使用场景
 
-**computed：** 是计算属性，依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计算 computed  的值；
+**computed：** 是计算属性，依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计算 computed 的值；
 
 **watch：** 更多的是「观察」的作用，类似于某些数据的监听回调 ，每当监听的数据变化时都会执行回调进行后续操作；
 
@@ -129,7 +129,7 @@ attempt: 1
 
 ## 路由懒加载
 
-Vue  是单页面应用，可能会有很多的路由引入 ，这样使用 webpcak 打包后的文件很大，当进入首页时，加载的资源过多，页面会出现白屏的情况，不利于用户体验。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应的组件，这样就更加高效了。这样会大大提高首屏显示的速度，但是可能其他的页面的速度就会降下来。
+Vue 是单页面应用，可能会有很多的路由引入 ，这样使用 webpcak 打包后的文件很大，当进入首页时，加载的资源过多，页面会出现白屏的情况，不利于用户体验。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应的组件，这样就更加高效了。这样会大大提高首屏显示的速度，但是可能其他的页面的速度就会降下来。
 
 **路由懒加载：**
 
@@ -191,6 +191,38 @@ import { Button, Select } from 'element-ui';
 **（2）服务端渲染的缺点：**
 
 - 更多的开发条件限制： 例如服务端渲染只支持 beforCreate 和 created 两个钩子函数，这会导致一些外部扩展库需要特殊处理，才能在服务端渲染应用程序中运行；并且与可以部署在任何静态文件服务器上的完全静态单页面应用程序 SPA 不同，服务端渲染应用程序，需要处于 Node.js server 运行环境；
-- 更多的服务器负载：在 Node.js 中渲染完整的应用程序，显然会比仅仅提供静态文件的 server 更加大量占用CPU 资源，因此如果你预料在高流量环境下使用，请准备相应的服务器负载，并明智地采用缓存策略。
+- 更多的服务器负载：在 Node.js 中渲染完整的应用程序，显然会比仅仅提供静态文件的 server 更加大量占用 CPU 资源，因此如果你预料在高流量环境下使用，请准备相应的服务器负载，并明智地采用缓存策略。
 
-如果你的项目的 SEO 和 首屏渲染是评价项目的关键指标，那么你的项目就需要服务端渲染来帮助你实现最佳的初始加载性能和 SEO，具体的 Vue SSR 如何实现，可以参考作者的另一篇文章《[Vue SSR 踩坑之旅](https://juejin.im/post/5cb6c36e6fb9a068af37aa35)》。如果你的 Vue 项目只需改善少数营销页面（例如  `/， /about， /contac`t 等）的 SEO，那么你可能需要**预渲染**，在构建时 (build time) 简单地生成针对特定路由的静态 HTML 文件。优点是设置预渲染更简单，并可以将你的前端作为一个完全静态的站点，具体你可以使用 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) 就可以轻松地添加预渲染 。
+如果你的项目的 SEO 和 首屏渲染是评价项目的关键指标，那么你的项目就需要服务端渲染来帮助你实现最佳的初始加载性能和 SEO，具体的 Vue SSR 如何实现，可以参考作者的另一篇文章《[Vue SSR 踩坑之旅](https://juejin.im/post/5cb6c36e6fb9a068af37aa35)》。如果你的 Vue 项目只需改善少数营销页面（例如 `/， /about， /contac`t 等）的 SEO，那么你可能需要**预渲染**，在构建时 (build time) 简单地生成针对特定路由的静态 HTML 文件。优点是设置预渲染更简单，并可以将你的前端作为一个完全静态的站点，具体你可以使用 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) 就可以轻松地添加预渲染 。
+
+## 将网站静态资源挂载到 CDN 上
+
+使用 `webpack` 中的 `externals`配合 和 使用 CDN 进行网页静态资源加速。
+
+> 防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。
+
+这样做的好处就是，在实际代码编写中，你仍然可以使用 `ES6 module` 的语法来进行外部资源的引用，而实际上却不会打包进最终的 `budle` 包中，可以极大的减少打包后的体积。
+
+```js
+// webpack 配置文件中
+module.exports = {
+  configureWebpack: (config) => {
+    config.entry.vendorModules = ["axios"];
+    config.entry.vendorLocal = ["@/assets/css/common.scss"];
+    config.externals = {
+      vue: "Vue",
+      vuex: "Vuex",
+      "element-ui": "ELEMENT",
+      "vue-router": "VueRouter",
+    };
+  },
+};
+```
+
+```html
+// vue index.html中
+<script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue-router@3.0.7/dist/vue-router.min.js"></script>
+<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.min.js"></script>
+<script src="https://unpkg.com/element-ui@2.9.1/lib/index.js"></script>
+```

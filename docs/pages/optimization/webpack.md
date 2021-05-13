@@ -1,35 +1,4 @@
-# 1.外部引用的插件，不放到最终打包的文件中
-
-```
-//webpack配置
-module.exports = {
-configureWebpack: config => {
-    config.entry.vendorModules = ['axios']
-    config.entry.vendorLocal = [
-      '@/assets/css/common.scss'
-    ]
-    config.externals = {
-      'vue': 'Vue',
-      'vuex': 'Vuex',
-      'element-ui': 'ELEMENT',
-      'vue-router': 'VueRouter'
-    }
-  }
-  }
-```
-
-# 2.使用cdn 
-
-```
-//在项目的index.html页面中
-
-<script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/vue-router@3.0.7/dist/vue-router.min.js"></script>
-    <script src="https://unpkg.com/vuex@3.1.1/dist/vuex.min.js"></script>
-    <script src="https://unpkg.com/element-ui@2.9.1/lib/index.js"></script>
-```
-
-# 3.取消.map的加载，这个在开发的时候，方便调试的。
+# 1.取消.map的加载，这个在开发的时候，方便调试的。
 
 ```
  //在webpack配置中
@@ -37,7 +6,7 @@ configureWebpack: config => {
 
 ```
 
-# 4.开启gzip加速
+# 2.开启gzip加速
 
 如果你的静态资源服务器使用的是nginx ,在nginx.conf配置文件中。
 
@@ -49,7 +18,7 @@ configureWebpack: config => {
 	 gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/x
 ```
 
-# 5.使用HappyPack多进程解析和处理文件
+# 3.使用HappyPack多进程解析和处理文件
 
 由于有大量文件需要解析和处理，所以构建是文件读写和计算密集型的操作，特别是当文件数量变多后，Webpack构建慢的问题会显得更为严重。运行在 Node.之上的Webpack是单线程模型的，也就是说Webpack需要一个一个地处理任务，不能同时处理多个任务。Happy Pack ( https://github.com/amireh/happypack ）就能让Webpack做到这一点，它将任务分解给多个子进程去并发执行，子进程处理完后再将结果发送给主进程。
 
