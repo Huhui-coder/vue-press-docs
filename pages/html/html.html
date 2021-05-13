@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>link 与@import | 菜鸡前端的自我拯救</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/vue-press-docs/菜鸡前端的自我拯救.JPG">
+    <meta name="description" content="Hit的前端笔记">
+    <link rel="preload" href="/vue-press-docs/assets/css/0.styles.7e858029.css" as="style"><link rel="preload" href="/vue-press-docs/assets/js/app.d1bb77a2.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/2.ba2966e9.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/23.e0666442.js" as="script"><link rel="prefetch" href="/vue-press-docs/assets/js/10.05cada00.js"><link rel="prefetch" href="/vue-press-docs/assets/js/11.74ba85bd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/12.f371a211.js"><link rel="prefetch" href="/vue-press-docs/assets/js/13.304a27c1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/14.a5fee8ab.js"><link rel="prefetch" href="/vue-press-docs/assets/js/15.7a3639dd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/16.f2d0fa2c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/17.e05e6511.js"><link rel="prefetch" href="/vue-press-docs/assets/js/18.bc237552.js"><link rel="prefetch" href="/vue-press-docs/assets/js/19.a8380019.js"><link rel="prefetch" href="/vue-press-docs/assets/js/20.17ec98c8.js"><link rel="prefetch" href="/vue-press-docs/assets/js/21.5e6086d4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/22.5a394ff4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/24.9f6a9fb4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/25.611cb8db.js"><link rel="prefetch" href="/vue-press-docs/assets/js/26.1d237232.js"><link rel="prefetch" href="/vue-press-docs/assets/js/27.1fe9f606.js"><link rel="prefetch" href="/vue-press-docs/assets/js/28.c07c3224.js"><link rel="prefetch" href="/vue-press-docs/assets/js/29.6e903c04.js"><link rel="prefetch" href="/vue-press-docs/assets/js/3.ffd664b0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/30.4c417983.js"><link rel="prefetch" href="/vue-press-docs/assets/js/31.bc9a2d3b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/32.c1b8f99f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/33.e553b5fb.js"><link rel="prefetch" href="/vue-press-docs/assets/js/34.6267da98.js"><link rel="prefetch" href="/vue-press-docs/assets/js/35.619f7e7d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/36.3572043d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/37.d2098db4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/38.43fbf035.js"><link rel="prefetch" href="/vue-press-docs/assets/js/39.d6ad5a02.js"><link rel="prefetch" href="/vue-press-docs/assets/js/4.32311195.js"><link rel="prefetch" href="/vue-press-docs/assets/js/40.d2c27f6a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/41.c6515e37.js"><link rel="prefetch" href="/vue-press-docs/assets/js/42.1f37c64c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/43.578e735f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/44.5c07b4c7.js"><link rel="prefetch" href="/vue-press-docs/assets/js/45.abe82439.js"><link rel="prefetch" href="/vue-press-docs/assets/js/46.c6ccf783.js"><link rel="prefetch" href="/vue-press-docs/assets/js/47.18b50bc0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/5.c0f60894.js"><link rel="prefetch" href="/vue-press-docs/assets/js/6.30c40647.js"><link rel="prefetch" href="/vue-press-docs/assets/js/7.d68ad62d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/8.ad99c7e4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/9.6e419261.js">
+    <link rel="stylesheet" href="/vue-press-docs/assets/css/0.styles.7e858029.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press-docs/" class="home-link router-link-active"><img src="/vue-press-docs/hit.JPG" alt="菜鸡前端的自我拯救" class="logo"> <span class="site-name can-hide">菜鸡前端的自我拯救</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link router-link-exact-active router-link-active">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link router-link-exact-active router-link-active">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>html</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/html/html.html" class="active sidebar-link">html</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="link-与-import"><a href="#link-与-import" class="header-anchor">#</a> link 与@import</h1> <ul><li>link 与 import , 本质使用上，我们都是用他来引入 css，但是他们有一定的区别。</li></ul> <p>link 是一种引入资源的标签，import 是引入 css 的方式。所以，import 引入的只能是 css，而 link 可以引入所有的资源，包括图片，RSS 等。</p> <ul><li>加载顺序上也有一些差异。</li></ul> <p>link 引用的 CSS 会同时被加载。
+import 引用的 CSS 会等到页面全部被下载完再加载。</p> <ul><li>兼容性的差别。</li></ul> <p>link 无任何兼容问题</p> <ul><li>动态引入样式</li></ul> <p>link 可以后期引入样式，而 import 是不可以后期引入的，只能初始化页面之前引入。</p> <ul><li>复用率的问题</li></ul> <p>import 可以复用之前的 css 文件，而 link 只能一次引用一个文件。
+当然，import 复用文件时，在浏览器实际上是加载了多个文件，会有多个请求。而每一个 link 只是一个 http 请求。</p> <h1 id="async-与-defer"><a href="#async-与-defer" class="header-anchor">#</a> async 与 defer</h1> <p>首先分析这两个属性为何而存在的问题。</p> <p>在日渐复杂的前端，异常已经是程序的一部分。如果出现一些小问题，或者服务器加载上出现延迟。而我们默认的引入的 script 脚本，会阻塞后续的 DOM 渲染。一旦没有部分异常无法及时加载完成，那么我们的页面因为阻塞问题，将整个白屏。
+也许我们可以保证自己服务器的正常，但是你决定保证不了第三方服务器的正常，于是引入了 async 和 defer 来优化这个问题。
+再来谈谈 script 的默认，async，defer 的之前的差异。
+默认情况下：
+浏览器会立即加载并执行指定的脚本。指定的脚本，指在 script 标签之上的脚本。所以，如果 script 放在 header 中，而对应的文件还未加载完成，会形成阻塞。所以这就是现在很多页面，都会使用默认且把 scipt 放在页面结尾的原因。</p> <p>async 情况下：
+async ，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）。async 是<strong>乱序</strong>的。</p> <p>defer 情况下：
+defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步），<strong>但是 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成。<strong>defer 是</strong>顺序执行</strong>。</p> <h1 id="分清事件委托，事件冒泡，事件捕获。"><a href="#分清事件委托，事件冒泡，事件捕获。" class="header-anchor">#</a> 分清事件委托，事件冒泡，事件捕获。</h1> <p>这三者的关系：</p> <ul><li>事件捕获和冒泡是现代浏览器的执行事件的两个不同阶段。</li> <li>事件委托是利用冒泡阶段的运行机制来实现的</li></ul> <p>通过<code>addEventListener()</code>的第三个属性来设置事件是通过捕获阶段注册的（true），还是冒泡阶段注册的（false）。默认情况下是 false。</p> <p>冒泡的具体表现:从实际操作的元素（事件）向上级父元素一级一级执行下去，直到达到<code>&lt;html&gt;</code>(从下到上)
+捕获的具体表现:浏览器检查元素的最外层祖先<code>&lt;html&gt;</code>，是否在捕获阶段中注册了一个 onclick 事件处理程序，如果是，则运行它。</p> <p>然后，它移动到<code>&lt;html&gt;</code>中的下一个元素(点击的元素的父元素)，并执行相同的操作，然后是下一个元素(点击的元素的父元素)，依此类推，直到到达实际点击的元素。
+事件委托的原理:事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div&gt;ul&gt;li&gt;a;比如给最里面的 a 加一个 click 点击事件，那么这个事件就会一层一层的往外执行，执行顺序 a&gt;li&gt;ul&gt;div，有这样一个机制，那么我们给最外面的 div 加点击事件，那么里面的 ul，li，a 做点击事件的时候，都会冒泡到最外层的 div 上，所以都会触发，这就是事件委托，委托它们父级代为执行事件。</p> <p>事件委托的应用场景: 如果你想要在大量子元素（包括动态添加的）中单击任何一个就可以运行一段代码，这个时候可以把事件监听器设置在父节点上。</p> <p><a href="https://www.cnblogs.com/liugang-vip/p/5616484.html" target="_blank" rel="noopener noreferrer">参考文献<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">11/10/2020, 4:26:14 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vue-press-docs/assets/js/app.d1bb77a2.js" defer></script><script src="/vue-press-docs/assets/js/2.ba2966e9.js" defer></script><script src="/vue-press-docs/assets/js/23.e0666442.js" defer></script>
+  </body>
+</html>

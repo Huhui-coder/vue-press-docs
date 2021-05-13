@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>let 特点 | 菜鸡前端的自我拯救</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/vue-press-docs/菜鸡前端的自我拯救.JPG">
+    <meta name="description" content="Hit的前端笔记">
+    <link rel="preload" href="/vue-press-docs/assets/css/0.styles.7e858029.css" as="style"><link rel="preload" href="/vue-press-docs/assets/js/app.d1bb77a2.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/2.ba2966e9.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/31.bc9a2d3b.js" as="script"><link rel="prefetch" href="/vue-press-docs/assets/js/10.05cada00.js"><link rel="prefetch" href="/vue-press-docs/assets/js/11.74ba85bd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/12.f371a211.js"><link rel="prefetch" href="/vue-press-docs/assets/js/13.304a27c1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/14.a5fee8ab.js"><link rel="prefetch" href="/vue-press-docs/assets/js/15.7a3639dd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/16.f2d0fa2c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/17.e05e6511.js"><link rel="prefetch" href="/vue-press-docs/assets/js/18.bc237552.js"><link rel="prefetch" href="/vue-press-docs/assets/js/19.a8380019.js"><link rel="prefetch" href="/vue-press-docs/assets/js/20.17ec98c8.js"><link rel="prefetch" href="/vue-press-docs/assets/js/21.5e6086d4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/22.5a394ff4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/23.e0666442.js"><link rel="prefetch" href="/vue-press-docs/assets/js/24.9f6a9fb4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/25.611cb8db.js"><link rel="prefetch" href="/vue-press-docs/assets/js/26.1d237232.js"><link rel="prefetch" href="/vue-press-docs/assets/js/27.1fe9f606.js"><link rel="prefetch" href="/vue-press-docs/assets/js/28.c07c3224.js"><link rel="prefetch" href="/vue-press-docs/assets/js/29.6e903c04.js"><link rel="prefetch" href="/vue-press-docs/assets/js/3.ffd664b0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/30.4c417983.js"><link rel="prefetch" href="/vue-press-docs/assets/js/32.c1b8f99f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/33.e553b5fb.js"><link rel="prefetch" href="/vue-press-docs/assets/js/34.6267da98.js"><link rel="prefetch" href="/vue-press-docs/assets/js/35.619f7e7d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/36.3572043d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/37.d2098db4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/38.43fbf035.js"><link rel="prefetch" href="/vue-press-docs/assets/js/39.d6ad5a02.js"><link rel="prefetch" href="/vue-press-docs/assets/js/4.32311195.js"><link rel="prefetch" href="/vue-press-docs/assets/js/40.d2c27f6a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/41.c6515e37.js"><link rel="prefetch" href="/vue-press-docs/assets/js/42.1f37c64c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/43.578e735f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/44.5c07b4c7.js"><link rel="prefetch" href="/vue-press-docs/assets/js/45.abe82439.js"><link rel="prefetch" href="/vue-press-docs/assets/js/46.c6ccf783.js"><link rel="prefetch" href="/vue-press-docs/assets/js/47.18b50bc0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/5.c0f60894.js"><link rel="prefetch" href="/vue-press-docs/assets/js/6.30c40647.js"><link rel="prefetch" href="/vue-press-docs/assets/js/7.d68ad62d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/8.ad99c7e4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/9.6e419261.js">
+    <link rel="stylesheet" href="/vue-press-docs/assets/css/0.styles.7e858029.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press-docs/" class="home-link router-link-active"><img src="/vue-press-docs/hit.JPG" alt="菜鸡前端的自我拯救" class="logo"> <span class="site-name can-hide">菜鸡前端的自我拯救</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Object.freeze()和const</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ES6</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/javaScript/let.html" class="active sidebar-link">let 与 const</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/javaScript/let.html#let-特点" class="sidebar-link">let 特点</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/javaScript/let.html#const-特点" class="sidebar-link">const 特点</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/javaScript/let.html#let-和-const-与-var-之间的不同" class="sidebar-link">let 和 const 与 var 之间的不同</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/javaScript/let.html#疑惑" class="sidebar-link">疑惑</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/javaScript/let.html#如何-冰冻-一个对象" class="sidebar-link">如何“冰冻”一个对象</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/javaScript/let.html#js-所有的声明变量的方法" class="sidebar-link">js 所有的声明变量的方法</a></li></ul></li><li><a href="/vue-press-docs/pages/javaScript/defineProperty.html" class="sidebar-link">defineProperty 与 proxy</a></li><li><a href="/vue-press-docs/pages/javaScript/Generator.html" class="sidebar-link">Generator</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>手写系列</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>实现继承</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="let-特点"><a href="#let-特点" class="header-anchor">#</a> let 特点</h2> <p>ES6 新增了 <code>let</code> 命令，用来声明变量。它的用法类似于 <code>var</code>，但是所声明的变量，只在 <code>let</code> 命令所在的代码块内有效。</p> <ul><li>无变量提升</li> <li>暂时性死区</li> <li>不允许重复声明</li> <li>块作用域</li></ul> <h2 id="const-特点"><a href="#const-特点" class="header-anchor">#</a> const 特点</h2> <p><code>const</code> 声明一个只读的常量。一旦声明，常量的值就不能改变。
+除了拥有 <code>let</code> 的特点，还有两个独属于 <code>const</code> 的特点。</p> <ul><li>声明时就必须要赋值</li> <li>声明的常量(简单数据类型)不可更改</li></ul> <h2 id="let-和-const-与-var-之间的不同"><a href="#let-和-const-与-var-之间的不同" class="header-anchor">#</a> let 和 const 与 var 之间的不同</h2> <p>由于 使用 <code>var</code> 声明的变量，是属于全局变量，是挂载到 <code>window</code> 对象上的，而 使用 <code>let</code> 或 <code>const</code> 是不会的。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span>a<span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span>b<span class="token punctuation">;</span> <span class="token comment">// undefined</span>
+<span class="token keyword">const</span> c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span>c<span class="token punctuation">;</span> <span class="token comment">//  undefined</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>在 <code>for</code> 循环中的差别，使用 <code>var</code> 声明的是全局变量， 而 使用 <code>let</code> 声明的是 局部变量，是拥有块级作用域的。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 6</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="疑惑"><a href="#疑惑" class="header-anchor">#</a> 疑惑</h2> <p>为何 <code>const</code> 表示声明一个常量，但当你将一个对象使用 <code>const</code> 声明后，还是可以改变这个对象呢？</p> <p><code>const</code> 实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，<code>const</code> 只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。</p> <h2 id="如何-冰冻-一个对象"><a href="#如何-冰冻-一个对象" class="header-anchor">#</a> 如何“冰冻”一个对象</h2> <p>哪怕你是使用<code>const</code> 去声明一个变量(引用类型的变量)，但其实，对象的结构啊，内部的属性啥的都是可以更改的，并不是真正的&quot;常量&quot;。
+而 使用 <code>Object.freeze()</code> 可以达到“冰冻”一个对象的目的。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">constantize</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">constantize</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="js-所有的声明变量的方法"><a href="#js-所有的声明变量的方法" class="header-anchor">#</a> js 所有的声明变量的方法</h2> <ul><li>var</li> <li>function</li> <li>let</li> <li>const</li> <li>import</li> <li>class</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">11/26/2020, 9:48:55 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="prev">
+        Object.freeze()&amp;const
+      </a></span> <span class="next"><a href="/vue-press-docs/pages/javaScript/defineProperty.html">
+        defineProperty 与 proxy
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vue-press-docs/assets/js/app.d1bb77a2.js" defer></script><script src="/vue-press-docs/assets/js/2.ba2966e9.js" defer></script><script src="/vue-press-docs/assets/js/31.bc9a2d3b.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>缓存概览 | 菜鸡前端的自我拯救</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/vue-press-docs/菜鸡前端的自我拯救.JPG">
+    <meta name="description" content="Hit的前端笔记">
+    <link rel="preload" href="/vue-press-docs/assets/css/0.styles.7e858029.css" as="style"><link rel="preload" href="/vue-press-docs/assets/js/app.d1bb77a2.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/2.ba2966e9.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/26.1d237232.js" as="script"><link rel="prefetch" href="/vue-press-docs/assets/js/10.05cada00.js"><link rel="prefetch" href="/vue-press-docs/assets/js/11.74ba85bd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/12.f371a211.js"><link rel="prefetch" href="/vue-press-docs/assets/js/13.304a27c1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/14.a5fee8ab.js"><link rel="prefetch" href="/vue-press-docs/assets/js/15.7a3639dd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/16.f2d0fa2c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/17.e05e6511.js"><link rel="prefetch" href="/vue-press-docs/assets/js/18.bc237552.js"><link rel="prefetch" href="/vue-press-docs/assets/js/19.a8380019.js"><link rel="prefetch" href="/vue-press-docs/assets/js/20.17ec98c8.js"><link rel="prefetch" href="/vue-press-docs/assets/js/21.5e6086d4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/22.5a394ff4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/23.e0666442.js"><link rel="prefetch" href="/vue-press-docs/assets/js/24.9f6a9fb4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/25.611cb8db.js"><link rel="prefetch" href="/vue-press-docs/assets/js/27.1fe9f606.js"><link rel="prefetch" href="/vue-press-docs/assets/js/28.c07c3224.js"><link rel="prefetch" href="/vue-press-docs/assets/js/29.6e903c04.js"><link rel="prefetch" href="/vue-press-docs/assets/js/3.ffd664b0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/30.4c417983.js"><link rel="prefetch" href="/vue-press-docs/assets/js/31.bc9a2d3b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/32.c1b8f99f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/33.e553b5fb.js"><link rel="prefetch" href="/vue-press-docs/assets/js/34.6267da98.js"><link rel="prefetch" href="/vue-press-docs/assets/js/35.619f7e7d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/36.3572043d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/37.d2098db4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/38.43fbf035.js"><link rel="prefetch" href="/vue-press-docs/assets/js/39.d6ad5a02.js"><link rel="prefetch" href="/vue-press-docs/assets/js/4.32311195.js"><link rel="prefetch" href="/vue-press-docs/assets/js/40.d2c27f6a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/41.c6515e37.js"><link rel="prefetch" href="/vue-press-docs/assets/js/42.1f37c64c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/43.578e735f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/44.5c07b4c7.js"><link rel="prefetch" href="/vue-press-docs/assets/js/45.abe82439.js"><link rel="prefetch" href="/vue-press-docs/assets/js/46.c6ccf783.js"><link rel="prefetch" href="/vue-press-docs/assets/js/47.18b50bc0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/5.c0f60894.js"><link rel="prefetch" href="/vue-press-docs/assets/js/6.30c40647.js"><link rel="prefetch" href="/vue-press-docs/assets/js/7.d68ad62d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/8.ad99c7e4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/9.6e419261.js">
+    <link rel="stylesheet" href="/vue-press-docs/assets/css/0.styles.7e858029.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press-docs/" class="home-link router-link-active"><img src="/vue-press-docs/hit.JPG" alt="菜鸡前端的自我拯救" class="logo"> <span class="site-name can-hide">菜鸡前端的自我拯救</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>http</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/http/http.html" class="sidebar-link">http协议</a></li><li><a href="/vue-press-docs/pages/http/http缓存.html" class="active sidebar-link">http缓存</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/http/http缓存.html#缓存概览" class="sidebar-link">缓存概览</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/http/http缓存.html#缓存的规则" class="sidebar-link">缓存的规则</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/http/http缓存.html#缓存的方案" class="sidebar-link">缓存的方案</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/http/http缓存.html#缓存的优点" class="sidebar-link">缓存的优点</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>cookie</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="缓存概览"><a href="#缓存概览" class="header-anchor">#</a> 缓存概览</h2> <p>缓存分为三种:<code>浏览器缓存</code>，<code>服务器缓存</code>，<code>代理服务器缓存</code>。
+而在 HTTP 中具备缓存的是 <code>浏览器缓存</code>，接下来我们来详细讲讲<code>浏览器缓存</code>。</p> <h3 id="缓存的规则"><a href="#缓存的规则" class="header-anchor">#</a> 缓存的规则</h3> <p>我们认为浏览器具备一个<code>缓存数据库</code>，用于存储不经常变化的静态文件(js,css,图片等)。
+浏览器缓存分为<code>强制缓存</code>和<code>协商缓存</code>。</p> <ul><li>强制缓存
+当<code>HTTP</code>请求的资源直接在浏览器中的缓存数据库中就能找到，那么就直接从该数据库中获得。</li> <li>协商缓存
+又称对比缓存，客户端会先从缓存数据库中获取到一个缓存数据的标识，得到标识后请求服务端验证是否失效（新鲜），如果没有失效服务端会返回 <strong>304</strong>，此时客户端直接从缓存中获取所请求的数据，如果标识失效，服务端会返回更新后的数据。</li> <li>两者优先级
+两类缓存机制可以同时存在，<strong>强制缓存的优先级高于协商缓存</strong>，当执行强制缓存时，如若缓存命中，则直接使用缓存数据库数据，不再进行缓存协商。</li></ul> <h3 id="缓存的方案"><a href="#缓存的方案" class="header-anchor">#</a> 缓存的方案</h3> <h4 id="强制缓存"><a href="#强制缓存" class="header-anchor">#</a> 强制缓存</h4> <blockquote><p>只需<code>客户端</code>参与所涉及的 HTTP 头部字段，<code>Expires</code> 和 <code>Cache-Control</code>， 后者的优先级先于前者。</p></blockquote> <h5 id="expires"><a href="#expires" class="header-anchor">#</a> Expires</h5> <blockquote><p>Exprires 的值为<strong>服务端返回的数据到期时间</strong>。</p></blockquote> <p>当再次请求时的请求时间<strong>小于</strong>返回的此时间，则直接使用缓存数据。但由于服务端时间和客户端时间可能<strong>有误差</strong>，这也将导致缓存命中的<strong>误差</strong>(所以 Cache-Control 的优先级先于 Exprires)，另一方面，Expires 是 HTTP1.0 的产物，故现在大多数<strong>使用</strong> <strong>Cache-Control 替代</strong>。</p> <h5 id="cache-control"><a href="#cache-control" class="header-anchor">#</a> Cache-Control</h5> <blockquote><p>Cache-Control 有很多属性，不同的属性代表的意义也不同。</p></blockquote> <ul><li>private：客户端可以缓存</li> <li>public：客户端和代理服务器都可以缓存</li> <li>max-age=t：缓存内容将在 t 秒后失效</li> <li>no-cache：需要使用协商缓存来验证缓存数据</li> <li>no-store：所有内容都不会缓存</li></ul> <h4 id="协商缓存"><a href="#协商缓存" class="header-anchor">#</a> 协商缓存</h4> <blockquote><p><strong><code>客户端</code>和<code>服务器端</code>都需要参与。</strong></p></blockquote> <p>协商缓存需要进行对比判断是否可以使用缓存。浏览器第一次请求数据时，服务器会将缓存标识与数据一起响应给客户端，客户端将它们备份至缓存中。再次请求时，客户端会将缓存中的标识发送给服务器，服务器根据此标识判断。若未失效，返回 <strong>304</strong> 状态码，浏览器拿到此状态码就可以直接使用缓存数据了。
+对于协商缓存来说，缓存标识我们需要着重理解一下，下面我们将着重介绍它的两种缓存方案。</p> <h4 id="last-modified"><a href="#last-modified" class="header-anchor">#</a> Last-Modified</h4> <p>服务器在响应请求时，会告诉浏览器资源的最后修改时间。</p> <h5 id="if-modified-since"><a href="#if-modified-since" class="header-anchor">#</a> if-Modified-Since</h5> <p>浏览器再次请求服务器的时候，请求头会包含此字段，后面跟着在缓存中获得的最后修改时间。服务端收到此请求头发现有 if-Modified-Since，则与被请求资源的最后修改时间进行对比，如果一致则返回 304 和响应报文头，浏览器只需要从缓存中获取信息即可。
+从字面上看，就是说：从某个时间节点算起，是否文件被修改了</p> <p>如果真的被修改：那么开始传输响应一个整体，服务器返回：200 OK
+如果没有被修改：那么只需传输响应 header，服务器返回：304 Not Modified</p> <h5 id="if-unmodified-since"><a href="#if-unmodified-since" class="header-anchor">#</a> if-Unmodified-Since</h5> <p>从字面上看, 就是说: 从某个时间点算起, 是否文件没有被修改</p> <p>如果没有被修改:则开始`继续'传送文件: 服务器返回: 200 OK
+如果文件被修改:则不传输,服务器返回: 412 Precondition failed (预处理错误)</p> <p>这两个的区别是一个是修改了才下载一个是没修改才下载。
+Last-Modified 说好却也不是特别好，因为如果在服务器上，一个资源被修改了，但其实际内容根本没发生改变，会因为 Last-Modified 时间匹配不上而返回了整个实体给客户端（即使客户端缓存里有个一模一样的资源）。为了解决这个问题，HTTP1.1 推出了 Etag。</p> <h4 id="etag"><a href="#etag" class="header-anchor">#</a> Etag</h4> <p>服务器响应请求时，通过此字段告诉浏览器当前资源在服务器生成的<strong>唯一标识</strong>（生成规则由服务器决定）</p> <h5 id="if-none-match"><a href="#if-none-match" class="header-anchor">#</a> If-None-Match</h5> <p>再次请求服务器时，浏览器的请求报文头部会包含此字段，后面的值为在缓存中获取的标识。服务器接收到次报文后发现 If-None-Match 则与被请求资源的唯一标识进行对比。</p> <p>不同，说明资源被改动过，则响应整个资源内容，返回状态码 200。
+相同，说明资源无心修改，则响应 header，浏览器直接从缓存中获取数据信息。返回状态码 304.</p> <p>但是实际应用中由于 Etag 的计算是使用算法来得出的，<strong>而算法会占用服务端计算的资源</strong>，所有服务端的资源都是宝贵的，所以就很<strong>少使用 Etag</strong>了。</p> <h3 id="缓存的优点"><a href="#缓存的优点" class="header-anchor">#</a> 缓存的优点</h3> <p>减少了冗余的数据传递，节省宽带流量
+减少了服务器的负担，大大提高了网站性能
+加快了客户端加载网页的速度 这也正是 HTTP 缓存属于客户端缓存的原因。</p> <p><a href="https://juejin.cn/post/6844903517702848526" target="_blank" rel="noopener noreferrer">HTTP 缓存机制<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://juejin.cn/post/6844903717574017031" target="_blank" rel="noopener noreferrer">HTTP 缓存<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">12/17/2020, 11:51:24 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue-press-docs/pages/http/http.html" class="prev">
+        http协议
+      </a></span> <span class="next"><a href="/vue-press-docs/pages/http/cookie.html">
+        cookie
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vue-press-docs/assets/js/app.d1bb77a2.js" defer></script><script src="/vue-press-docs/assets/js/2.ba2966e9.js" defer></script><script src="/vue-press-docs/assets/js/26.1d237232.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>v-if 和 v-show 区分使用场景 | 菜鸡前端的自我拯救</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/vue-press-docs/菜鸡前端的自我拯救.JPG">
+    <meta name="description" content="Hit的前端笔记">
+    <link rel="preload" href="/vue-press-docs/assets/css/0.styles.7e858029.css" as="style"><link rel="preload" href="/vue-press-docs/assets/js/app.d1bb77a2.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/2.ba2966e9.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/39.d6ad5a02.js" as="script"><link rel="prefetch" href="/vue-press-docs/assets/js/10.05cada00.js"><link rel="prefetch" href="/vue-press-docs/assets/js/11.74ba85bd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/12.f371a211.js"><link rel="prefetch" href="/vue-press-docs/assets/js/13.304a27c1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/14.a5fee8ab.js"><link rel="prefetch" href="/vue-press-docs/assets/js/15.7a3639dd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/16.f2d0fa2c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/17.e05e6511.js"><link rel="prefetch" href="/vue-press-docs/assets/js/18.bc237552.js"><link rel="prefetch" href="/vue-press-docs/assets/js/19.a8380019.js"><link rel="prefetch" href="/vue-press-docs/assets/js/20.17ec98c8.js"><link rel="prefetch" href="/vue-press-docs/assets/js/21.5e6086d4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/22.5a394ff4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/23.e0666442.js"><link rel="prefetch" href="/vue-press-docs/assets/js/24.9f6a9fb4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/25.611cb8db.js"><link rel="prefetch" href="/vue-press-docs/assets/js/26.1d237232.js"><link rel="prefetch" href="/vue-press-docs/assets/js/27.1fe9f606.js"><link rel="prefetch" href="/vue-press-docs/assets/js/28.c07c3224.js"><link rel="prefetch" href="/vue-press-docs/assets/js/29.6e903c04.js"><link rel="prefetch" href="/vue-press-docs/assets/js/3.ffd664b0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/30.4c417983.js"><link rel="prefetch" href="/vue-press-docs/assets/js/31.bc9a2d3b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/32.c1b8f99f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/33.e553b5fb.js"><link rel="prefetch" href="/vue-press-docs/assets/js/34.6267da98.js"><link rel="prefetch" href="/vue-press-docs/assets/js/35.619f7e7d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/36.3572043d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/37.d2098db4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/38.43fbf035.js"><link rel="prefetch" href="/vue-press-docs/assets/js/4.32311195.js"><link rel="prefetch" href="/vue-press-docs/assets/js/40.d2c27f6a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/41.c6515e37.js"><link rel="prefetch" href="/vue-press-docs/assets/js/42.1f37c64c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/43.578e735f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/44.5c07b4c7.js"><link rel="prefetch" href="/vue-press-docs/assets/js/45.abe82439.js"><link rel="prefetch" href="/vue-press-docs/assets/js/46.c6ccf783.js"><link rel="prefetch" href="/vue-press-docs/assets/js/47.18b50bc0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/5.c0f60894.js"><link rel="prefetch" href="/vue-press-docs/assets/js/6.30c40647.js"><link rel="prefetch" href="/vue-press-docs/assets/js/7.d68ad62d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/8.ad99c7e4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/9.6e419261.js">
+    <link rel="stylesheet" href="/vue-press-docs/assets/css/0.styles.7e858029.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press-docs/" class="home-link router-link-active"><img src="/vue-press-docs/hit.JPG" alt="菜鸡前端的自我拯救" class="logo"> <span class="site-name can-hide">菜鸡前端的自我拯救</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link router-link-exact-active router-link-active">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link router-link-exact-active router-link-active">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>性能优化</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/optimization/性能优化关键要素.html" class="sidebar-link">性能优化关键要素</a></li><li><a href="/vue-press-docs/pages/optimization/vue-code.html" class="active sidebar-link">vue代码层面</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#v-if-和-v-show-区分使用场景" class="sidebar-link">v-if 和 v-show 区分使用场景</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#computed-和-watch-区分使用场景" class="sidebar-link">computed 和 watch 区分使用场景</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#v-for-遍历必须为-item-添加-key，且避免同时使用-v-if" class="sidebar-link">v-for 遍历必须为 item 添加 key，且避免同时使用 v-if</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#长列表性能优化" class="sidebar-link">长列表性能优化</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#事件的销毁" class="sidebar-link">事件的销毁</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#图片资源懒加载" class="sidebar-link">图片资源懒加载</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#路由懒加载" class="sidebar-link">路由懒加载</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#第三方插件的按需引入" class="sidebar-link">第三方插件的按需引入</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#spa-and-服务端渲染-ssr-or-预渲染" class="sidebar-link">SPA and 服务端渲染 SSR or 预渲染</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/optimization/vue-code.html#将网站静态资源挂载到-cdn-上" class="sidebar-link">将网站静态资源挂载到 CDN 上</a></li></ul></li><li><a href="/vue-press-docs/pages/optimization/webpack.html" class="sidebar-link">webpack配置层面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="v-if-和-v-show-区分使用场景"><a href="#v-if-和-v-show-区分使用场景" class="header-anchor">#</a> v-if 和 v-show 区分使用场景</h2> <p><strong>v-if</strong> 是 <strong>真正</strong> 的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；也是<strong>惰性的</strong>：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</p> <p><strong>v-show</strong> 就简单得多， 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 display 属性进行切换。</p> <p>所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景；v-show 则适用于需要非常频繁切换条件的场景。</p> <h2 id="computed-和-watch-区分使用场景"><a href="#computed-和-watch-区分使用场景" class="header-anchor">#</a> computed 和 watch 区分使用场景</h2> <p><strong>computed：</strong> 是计算属性，依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计算 computed 的值；</p> <p><strong>watch：</strong> 更多的是「观察」的作用，类似于某些数据的监听回调 ，每当监听的数据变化时都会执行回调进行后续操作；</p> <p><strong>运用场景：</strong></p> <ul><li>当我们需要进行数值计算，并且依赖于其它数据时，应该使用 computed，因为可以利用 computed 的缓存特性，避免每次获取值时，都要重新计算；</li> <li>当我们需要在数据变化时执行异步或开销较大的操作时，应该使用 watch，使用 watch 选项允许我们执行异步操作 ( 访问一个 API )，限制我们执行该操作的频率，并在我们得到最终结果前，设置中间状态。这些都是计算属性无法做到的。</li></ul> <h2 id="v-for-遍历必须为-item-添加-key，且避免同时使用-v-if"><a href="#v-for-遍历必须为-item-添加-key，且避免同时使用-v-if" class="header-anchor">#</a> v-for 遍历必须为 item 添加 key，且避免同时使用 v-if</h2> <p><strong>（1）v-for 遍历必须为 item 添加 key</strong></p> <p>在列表数据进行遍历渲染时，需要为每一项 item 设置唯一 key 值，方便 Vue.js 内部机制精准找到该条列表数据。当 state 更新时，新的状态值和旧的状态值对比，较快地定位到 diff 。</p> <p><strong>（2）v-for 遍历避免同时使用 v-if</strong></p> <p>v-for 比 v-if 优先级高，如果每一次都需要遍历整个数组，将会影响速度，尤其是当之需要渲染很小一部分的时候，必要情况下应该替换成 computed 属性。</p> <p><strong>推荐：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;ul&gt;
+  &lt;li
+    v-for=&quot;user in activeUsers&quot;
+    :key=&quot;user.id&quot;&gt;
+    {{ user.name }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+computed: {
+  activeUsers: function () {
+    return this.users.filter(function (user) {
+	 return user.isActive
+    })
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><strong>不推荐：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;ul&gt;
+  &lt;li
+    v-for=&quot;user in users&quot;
+    v-if=&quot;user.isActive&quot;
+    :key=&quot;user.id&quot;&gt;
+    {{ user.name }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="长列表性能优化"><a href="#长列表性能优化" class="header-anchor">#</a> 长列表性能优化</h2> <p>Vue 会通过 Object.defineProperty 对数据进行劫持，来实现视图响应数据的变化，然而有些时候我们的组件就是纯粹的数据展示，不会有任何改变，我们就不需要 Vue 来劫持我们的数据，在大量数据展示的情况下，这能够很明显的减少组件初始化的时间，那如何禁止 Vue 劫持我们的数据呢？可以通过 <strong>Object.freeze</strong> 方法来冻结一个对象，一旦被冻结的对象就再也不能被修改了。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>export default {
+  data: () =&gt; ({
+    users: {}
+  }),
+  async created() {
+    const users = await axios.get(&quot;/api/users&quot;);
+    this.users = Object.freeze(users);
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="事件的销毁"><a href="#事件的销毁" class="header-anchor">#</a> 事件的销毁</h2> <p>Vue 组件销毁时，会自动清理它与其它实例的连接，解绑它的全部指令及事件监听器，但是仅限于组件本身的事件。 如果在 js 内使用 addEventListene 等方式是不会自动销毁的，我们需要在组件销毁时手动移除这些事件的监听，以免造成内存泄露，如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>created() {
+  addEventListener('click', this.click, false)
+},
+beforeDestroy() {
+  removeEventListener('click', this.click, false)
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="图片资源懒加载"><a href="#图片资源懒加载" class="header-anchor">#</a> 图片资源懒加载</h2> <p>对于图片过多的页面，为了加速页面加载速度，所以很多时候我们需要将页面内未出现在可视区域内的图片先不做加载， 等到滚动到可视区域后再去加载。这样对于页面加载性能上会有很大的提升，也提高了用户体验。我们在项目中使用 Vue 的 vue-lazyload 插件：</p> <p>（1）安装插件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install vue-lazyload --save-dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>（2）在入口文件 man.js 中引入并使用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import VueLazyload from 'vue-lazyload'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后再 vue 中直接使用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue.use(VueLazyload)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>或者添加自定义选项</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue.use(VueLazyload, {
+preLoad: 1.3,
+error: 'dist/error.png',
+loading: 'dist/loading.gif',
+attempt: 1
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>（3）在 vue 文件中将 img 标签的 src 属性直接改为 v-lazy ，从而将图片显示方式更改为懒加载显示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;img v-lazy=&quot;/static/img/1.png&quot;&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="路由懒加载"><a href="#路由懒加载" class="header-anchor">#</a> 路由懒加载</h2> <p>Vue 是单页面应用，可能会有很多的路由引入 ，这样使用 webpcak 打包后的文件很大，当进入首页时，加载的资源过多，页面会出现白屏的情况，不利于用户体验。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应的组件，这样就更加高效了。这样会大大提高首屏显示的速度，但是可能其他的页面的速度就会降下来。</p> <p><strong>路由懒加载：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const Foo = () =&gt; import('./Foo.vue')
+const router = new VueRouter({
+  routes: [
+    { path: '/foo', component: Foo }
+  ]
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="第三方插件的按需引入"><a href="#第三方插件的按需引入" class="header-anchor">#</a> 第三方插件的按需引入</h2> <p>我们在项目中经常会需要引入第三方插件，如果我们直接引入整个插件，会导致项目的体积太大，我们可以借助 <code>babel-plugin-component</code> ，然后可以只引入需要的组件，以达到减小项目体积的目的。以下为项目中引入 element-ui 组件库为例：</p> <p>（1）首先，安装 <code>babel-plugin-component</code> ：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install babel-plugin-component -D
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>（2）然后，将 .babelrc 修改为：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  &quot;presets&quot;: [[&quot;es2015&quot;, { &quot;modules&quot;: false }]],
+  &quot;plugins&quot;: [
+    [
+      &quot;component&quot;,
+      {
+        &quot;libraryName&quot;: &quot;element-ui&quot;,
+        &quot;styleLibraryName&quot;: &quot;theme-chalk&quot;
+      }
+    ]
+  ]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>（3）在 main.js 中引入部分组件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import Vue from 'vue';
+import { Button, Select } from 'element-ui';
+
+ Vue.use(Button)
+ Vue.use(Select)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="spa-and-服务端渲染-ssr-or-预渲染"><a href="#spa-and-服务端渲染-ssr-or-预渲染" class="header-anchor">#</a> SPA and 服务端渲染 SSR or 预渲染</h2> <p>服务端渲染是指 Vue 在客户端将标签渲染成的整个 html 片段的工作在服务端完成，服务端形成的 html 片段直接返回给客户端这个过程就叫做服务端渲染。</p> <p><strong>（1）服务端渲染的优点：</strong></p> <ul><li>更好的 SEO： 因为 SPA 页面的内容是通过 Ajax 获取，而搜索引擎爬取工具并不会等待 Ajax 异步完成后再抓取页面内容，所以在 SPA 中是抓取不到页面通过 Ajax 获取到的内容；而 SSR 是直接由服务端返回已经渲染好的页面（数据已经包含在页面中），所以搜索引擎爬取工具可以抓取渲染好的页面；</li> <li>更快的内容到达时间（首屏加载更快）： SPA 会等待所有 Vue 编译后的 js 文件都下载完成后，才开始进行页面的渲染，文件下载等需要一定的时间等，所以首屏渲染需要一定的时间；SSR 直接由服务端渲染好页面直接返回显示，无需等待下载 js 文件及再去渲染等，所以 SSR 有更快的内容到达时间；</li></ul> <p><strong>（2）服务端渲染的缺点：</strong></p> <ul><li>更多的开发条件限制： 例如服务端渲染只支持 beforCreate 和 created 两个钩子函数，这会导致一些外部扩展库需要特殊处理，才能在服务端渲染应用程序中运行；并且与可以部署在任何静态文件服务器上的完全静态单页面应用程序 SPA 不同，服务端渲染应用程序，需要处于 Node.js server 运行环境；</li> <li>更多的服务器负载：在 Node.js 中渲染完整的应用程序，显然会比仅仅提供静态文件的 server 更加大量占用 CPU 资源，因此如果你预料在高流量环境下使用，请准备相应的服务器负载，并明智地采用缓存策略。</li></ul> <p>如果你的项目的 SEO 和 首屏渲染是评价项目的关键指标，那么你的项目就需要服务端渲染来帮助你实现最佳的初始加载性能和 SEO，具体的 Vue SSR 如何实现，可以参考作者的另一篇文章《<a href="https://juejin.im/post/5cb6c36e6fb9a068af37aa35" target="_blank" rel="noopener noreferrer">Vue SSR 踩坑之旅<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>》。如果你的 Vue 项目只需改善少数营销页面（例如 <code>/， /about， /contac</code>t 等）的 SEO，那么你可能需要<strong>预渲染</strong>，在构建时 (build time) 简单地生成针对特定路由的静态 HTML 文件。优点是设置预渲染更简单，并可以将你的前端作为一个完全静态的站点，具体你可以使用 <a href="https://github.com/chrisvfritz/prerender-spa-plugin" target="_blank" rel="noopener noreferrer">prerender-spa-plugin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 就可以轻松地添加预渲染 。</p> <h2 id="将网站静态资源挂载到-cdn-上"><a href="#将网站静态资源挂载到-cdn-上" class="header-anchor">#</a> 将网站静态资源挂载到 CDN 上</h2> <p>使用 <code>webpack</code> 中的 <code>externals</code>配合 和 使用 CDN 进行网页静态资源加速。</p> <blockquote><p>防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。</p></blockquote> <p>这样做的好处就是，在实际代码编写中，你仍然可以使用 <code>ES6 module</code> 的语法来进行外部资源的引用，而实际上却不会打包进最终的 <code>budle</code> 包中，可以极大的减少打包后的体积。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// webpack 配置文件中</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">configureWebpack</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span>entry<span class="token punctuation">.</span>vendorModules <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;axios&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    config<span class="token punctuation">.</span>entry<span class="token punctuation">.</span>vendorLocal <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;@/assets/css/common.scss&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    config<span class="token punctuation">.</span>externals <span class="token operator">=</span> <span class="token punctuation">{</span>
+      vue<span class="token operator">:</span> <span class="token string">&quot;Vue&quot;</span><span class="token punctuation">,</span>
+      vuex<span class="token operator">:</span> <span class="token string">&quot;Vuex&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;element-ui&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ELEMENT&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;vue-router&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VueRouter&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><div class="language-html line-numbers-mode"><pre class="language-html"><code>// vue index.html中
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/vue@2.6.10/dist/vue.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/vue-router@3.0.7/dist/vue-router.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/vuex@3.1.1/dist/vuex.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/element-ui@2.9.1/lib/index.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">5/13/2021, 11:15:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue-press-docs/pages/optimization/性能优化关键要素.html" class="prev">
+        性能优化关键要素
+      </a></span> <span class="next"><a href="/vue-press-docs/pages/optimization/webpack.html">
+        webpack配置层面
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vue-press-docs/assets/js/app.d1bb77a2.js" defer></script><script src="/vue-press-docs/assets/js/2.ba2966e9.js" defer></script><script src="/vue-press-docs/assets/js/39.d6ad5a02.js" defer></script>
+  </body>
+</html>

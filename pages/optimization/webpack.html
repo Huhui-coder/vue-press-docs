@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.取消.map的加载，这个在开发的时候，方便调试的。 | 菜鸡前端的自我拯救</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/vue-press-docs/菜鸡前端的自我拯救.JPG">
+    <meta name="description" content="Hit的前端笔记">
+    <link rel="preload" href="/vue-press-docs/assets/css/0.styles.7e858029.css" as="style"><link rel="preload" href="/vue-press-docs/assets/js/app.d1bb77a2.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/2.ba2966e9.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/40.d2c27f6a.js" as="script"><link rel="prefetch" href="/vue-press-docs/assets/js/10.05cada00.js"><link rel="prefetch" href="/vue-press-docs/assets/js/11.74ba85bd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/12.f371a211.js"><link rel="prefetch" href="/vue-press-docs/assets/js/13.304a27c1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/14.a5fee8ab.js"><link rel="prefetch" href="/vue-press-docs/assets/js/15.7a3639dd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/16.f2d0fa2c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/17.e05e6511.js"><link rel="prefetch" href="/vue-press-docs/assets/js/18.bc237552.js"><link rel="prefetch" href="/vue-press-docs/assets/js/19.a8380019.js"><link rel="prefetch" href="/vue-press-docs/assets/js/20.17ec98c8.js"><link rel="prefetch" href="/vue-press-docs/assets/js/21.5e6086d4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/22.5a394ff4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/23.e0666442.js"><link rel="prefetch" href="/vue-press-docs/assets/js/24.9f6a9fb4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/25.611cb8db.js"><link rel="prefetch" href="/vue-press-docs/assets/js/26.1d237232.js"><link rel="prefetch" href="/vue-press-docs/assets/js/27.1fe9f606.js"><link rel="prefetch" href="/vue-press-docs/assets/js/28.c07c3224.js"><link rel="prefetch" href="/vue-press-docs/assets/js/29.6e903c04.js"><link rel="prefetch" href="/vue-press-docs/assets/js/3.ffd664b0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/30.4c417983.js"><link rel="prefetch" href="/vue-press-docs/assets/js/31.bc9a2d3b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/32.c1b8f99f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/33.e553b5fb.js"><link rel="prefetch" href="/vue-press-docs/assets/js/34.6267da98.js"><link rel="prefetch" href="/vue-press-docs/assets/js/35.619f7e7d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/36.3572043d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/37.d2098db4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/38.43fbf035.js"><link rel="prefetch" href="/vue-press-docs/assets/js/39.d6ad5a02.js"><link rel="prefetch" href="/vue-press-docs/assets/js/4.32311195.js"><link rel="prefetch" href="/vue-press-docs/assets/js/41.c6515e37.js"><link rel="prefetch" href="/vue-press-docs/assets/js/42.1f37c64c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/43.578e735f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/44.5c07b4c7.js"><link rel="prefetch" href="/vue-press-docs/assets/js/45.abe82439.js"><link rel="prefetch" href="/vue-press-docs/assets/js/46.c6ccf783.js"><link rel="prefetch" href="/vue-press-docs/assets/js/47.18b50bc0.js"><link rel="prefetch" href="/vue-press-docs/assets/js/5.c0f60894.js"><link rel="prefetch" href="/vue-press-docs/assets/js/6.30c40647.js"><link rel="prefetch" href="/vue-press-docs/assets/js/7.d68ad62d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/8.ad99c7e4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/9.6e419261.js">
+    <link rel="stylesheet" href="/vue-press-docs/assets/css/0.styles.7e858029.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press-docs/" class="home-link router-link-active"><img src="/vue-press-docs/hit.JPG" alt="菜鸡前端的自我拯救" class="logo"> <span class="site-name can-hide">菜鸡前端的自我拯救</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" class="nav-link">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/live/live.html" class="nav-link">
+  前端做直播
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/study/todo.html" class="nav-link">
+  学习计划
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>性能优化</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/optimization/性能优化关键要素.html" class="sidebar-link">性能优化关键要素</a></li><li><a href="/vue-press-docs/pages/optimization/vue-code.html" class="sidebar-link">vue代码层面</a></li><li><a href="/vue-press-docs/pages/optimization/webpack.html" class="active sidebar-link">webpack配置层面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_1-取消-map的加载，这个在开发的时候，方便调试的。"><a href="#_1-取消-map的加载，这个在开发的时候，方便调试的。" class="header-anchor">#</a> 1.取消.map的加载，这个在开发的时候，方便调试的。</h1> <div class="language- line-numbers-mode"><pre class="language-text"><code> //在webpack配置中
+ productionSourceMap: false,
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h1 id="_2-开启gzip加速"><a href="#_2-开启gzip加速" class="header-anchor">#</a> 2.开启gzip加速</h1> <p>如果你的静态资源服务器使用的是nginx ,在nginx.conf配置文件中。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>   gzip on;
+	 gzip_min_length 1k;
+	 gzip_comp_level 5;
+	 gzip_buffers 4 16k;
+	 gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/x
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h1 id="_3-使用happypack多进程解析和处理文件"><a href="#_3-使用happypack多进程解析和处理文件" class="header-anchor">#</a> 3.使用HappyPack多进程解析和处理文件</h1> <p>由于有大量文件需要解析和处理，所以构建是文件读写和计算密集型的操作，特别是当文件数量变多后，Webpack构建慢的问题会显得更为严重。运行在 Node.之上的Webpack是单线程模型的，也就是说Webpack需要一个一个地处理任务，不能同时处理多个任务。Happy Pack ( https://github.com/amireh/happypack ）就能让Webpack做到这一点，它将任务分解给多个子进程去并发执行，子进程处理完后再将结果发送给主进程。</p> <p><strong>项目中HappyPack使用配置：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>（1）HappyPack插件安装：
+    $ npm i -D happypack
+（2）webpack.base.conf.js 文件对module.rules进行配置
+    module: {
+     rules: [
+      {
+        test: /\.js$/,
+        // 将对.js 文件的处理转交给 id 为 babel 的HappyPack实例
+          use:['happypack/loader?id=babel'],
+          include: [resolve('src'), resolve('test'),   
+            resolve('node_modules/webpack-dev-server/client')],
+        // 排除第三方插件
+          exclude:path.resolve(__dirname,'node_modules'),
+        },
+        {
+          test: /\.vue$/,
+          use: ['happypack/loader?id=vue'],
+        },
+      ]
+    },
+（3）webpack.prod.conf.js 文件进行配置    const HappyPack = require('happypack');
+    // 构造出共享进程池，在进程池中包含5个子进程
+    const HappyPackThreadPool = HappyPack.ThreadPool({size:5});
+    plugins: [
+       new HappyPack({
+         // 用唯一的标识符id，来代表当前的HappyPack是用来处理一类特定的文件
+         id:'vue',
+         loaders:[
+           {
+             loader:'vue-loader',
+             options: vueLoaderConfig
+           }
+         ],
+         threadPool: HappyPackThreadPool,
+       }),
+
+       new HappyPack({
+         // 用唯一的标识符id，来代表当前的HappyPack是用来处理一类特定的文件
+         id:'babel',
+         // 如何处理.js文件，用法和Loader配置中一样
+         loaders:['babel-loader?cacheDirectory'],
+         threadPool: HappyPackThreadPool,
+       }),
+    ]
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">5/13/2021, 11:15:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue-press-docs/pages/optimization/vue-code.html" class="prev">
+        vue代码层面
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vue-press-docs/assets/js/app.d1bb77a2.js" defer></script><script src="/vue-press-docs/assets/js/2.ba2966e9.js" defer></script><script src="/vue-press-docs/assets/js/40.d2c27f6a.js" defer></script>
+  </body>
+</html>
