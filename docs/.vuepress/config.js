@@ -57,19 +57,28 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'grid', // 必要的
+                    title: '盒子模型', // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
                     sidebarDepth: 10, // 可选的, 默认值是 1
                     children: [
-                        ['grid.md', 'grid']
+                        ['盒子模型.md', '盒子模型']
                     ]
                 },
+                
                 {
                     title: 'flex', // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
                     sidebarDepth: 10, // 可选的, 默认值是 1
                     children: [
                         ['flex.md', 'flex']
+                    ]
+                },
+                {
+                    title: 'grid', // 必要的
+                    collapsable: false, // 可选的, 默认值是 true,
+                    sidebarDepth: 10, // 可选的, 默认值是 1
+                    children: [
+                        ['grid.md', 'grid']
                     ]
                 },
                 {
@@ -109,7 +118,35 @@ module.exports = {
                     ['webpack.md', 'webpack']
                 ]
             }],
-            '/pages/javaScript/': [{
+            '/pages/javaScript/': [
+                {
+                    title: '核心知识详解', // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10, // 可选的, 默认值是 1
+                    children: [
+                        ['1_数据类型.md', '数据类型'],
+                        ['2_类型判断.md', '类型判断'],
+                        ['3_类型转换.md', '类型转换'],
+                        ['4_this.md', 'this'],
+                        ['5_闭包.md', '闭包'],
+                        ['6_作用域.md', '作用域'],
+                        ['7_变量提升.md', '变量提升'],
+                        ['8_new.md', 'new'],
+                        ['9_call,apply,bind.md', 'call'],
+                        ['10_原型.md', '原型'],
+                        ['11_Class.md', 'Class'],
+                        ['12_继承.md', '继承'],
+                        ['13_模块化.md', '模块化'],
+                        ['14_Promise.md', 'Promise'],
+                        ['15_迭代器与生成器.md', '迭代器与生成器'],
+                        ['16_async await.md', 'async'],
+                        ['17_事件循环.md', '事件循环'],
+                        ['18_节流与防抖.md', '节流与防抖'],
+                        ['19_柯里化.md', '柯里化'],
+                        ['20_垃圾回收.md', '垃圾回收'],
+                        ['21_其他零散但重要的知识.md', '其他零散但重要的知识'],
+                    ]
+                },{
                     title: 'Object.freeze()和const', // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 10, // 可选的, 默认值是 1
@@ -228,7 +265,8 @@ module.exports = {
                 collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 10, // 可选的, 默认值是 1
                 children: [
-                    ['todo.md', 'todo']
+                    ['todo.md', 'todo'],
+                    ['cq.md', 'ChongQing']
                 ]
             }],
             '/pages/ts/': [{
