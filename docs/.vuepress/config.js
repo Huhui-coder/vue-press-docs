@@ -1,10 +1,10 @@
 module.exports = {
     base: '/vue-press-docs/', // 比如你的仓库是test
-    title: '菜鸡前端的自我拯救', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    title: '不断进步', // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: 'Hit的前端笔记', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
-        ['link', { rel: 'icon', href: '/菜鸡前端的自我拯救.JPG' }], //浏览器的标签栏的网页图标
+        ['link', { rel: 'icon', href: '/不断进步.JPG' }], //浏览器的标签栏的网页图标
     ],
     markdown: {
         lineNumbers: true
