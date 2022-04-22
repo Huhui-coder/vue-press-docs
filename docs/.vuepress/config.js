@@ -113,6 +113,8 @@ module.exports = {
                 collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 10, // 可选的, 默认值是 1
                 children: [
+                    ['strong.md', '代码的健壮性'],
+                    ['clean.md', '代码整洁性'],
                     ['guide.md', '代码规范'],
                     ['specification.md', '项目配置'],
                     ['webpack.md', 'webpack']
