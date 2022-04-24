@@ -32,7 +32,7 @@ module.exports = {
                     { text: '框架源码系列', link: '/pages/framework-source/vue-source.md' },
                     { text: '性能优化系列', link: '/pages/optimization/vue-code.md' },
                     { text: '前端做直播', link: '/pages/live/live.md' },
-                    { text: '学习计划', link: '/pages/study/todo.md' },
+                    // { text: '学习计划', link: '/pages/study/todo.md' },
 
                     // { text: '199管理类联考', link: '/pages/management/math.md' },
                 ]
