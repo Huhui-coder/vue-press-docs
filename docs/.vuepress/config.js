@@ -198,7 +198,8 @@ module.exports = {
                 sidebarDepth: 10, // 可选的, 默认值是 1
                 children: [
                     ['browser.md', '前端攻击技术'],
-                    ['storage.md', '前端存储技术']
+                    ['storage.md', '前端存储技术'],
+                    ['auth.md', '前端认证技术']
                 ]
             }],
             '/pages/framework/': [{
