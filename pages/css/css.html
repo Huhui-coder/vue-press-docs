@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>简述让一个元素在窗口中消失以及垂直水平居中的方法，还有Flex布局的理解。 | 不断进步</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/vue-press-docs/不断进步.JPG">
+    <meta name="description" content="Hit的前端笔记">
+    
+    <link rel="preload" href="/vue-press-docs/assets/css/0.styles.8e0a4dbf.css" as="style"><link rel="preload" href="/vue-press-docs/assets/js/app.d8725ef0.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/2.a05206b7.js" as="script"><link rel="preload" href="/vue-press-docs/assets/js/15.e3c8b020.js" as="script"><link rel="prefetch" href="/vue-press-docs/assets/js/10.291c5b1d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/11.837906d7.js"><link rel="prefetch" href="/vue-press-docs/assets/js/12.68839ecd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/13.c5264567.js"><link rel="prefetch" href="/vue-press-docs/assets/js/14.29739af6.js"><link rel="prefetch" href="/vue-press-docs/assets/js/16.218006ef.js"><link rel="prefetch" href="/vue-press-docs/assets/js/17.e118f6a2.js"><link rel="prefetch" href="/vue-press-docs/assets/js/18.a6aa10bb.js"><link rel="prefetch" href="/vue-press-docs/assets/js/19.8a65c4ea.js"><link rel="prefetch" href="/vue-press-docs/assets/js/20.2a59e164.js"><link rel="prefetch" href="/vue-press-docs/assets/js/21.f3d67e95.js"><link rel="prefetch" href="/vue-press-docs/assets/js/22.0f5ad16d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/23.21d9d0f1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/24.3d484fb5.js"><link rel="prefetch" href="/vue-press-docs/assets/js/25.c603a96a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/26.9ab9b754.js"><link rel="prefetch" href="/vue-press-docs/assets/js/27.38a22fef.js"><link rel="prefetch" href="/vue-press-docs/assets/js/28.a6fb0ad4.js"><link rel="prefetch" href="/vue-press-docs/assets/js/29.6b6978f8.js"><link rel="prefetch" href="/vue-press-docs/assets/js/3.a38e7322.js"><link rel="prefetch" href="/vue-press-docs/assets/js/30.9105745c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/31.646dcbc3.js"><link rel="prefetch" href="/vue-press-docs/assets/js/32.6fb88f54.js"><link rel="prefetch" href="/vue-press-docs/assets/js/33.efb42491.js"><link rel="prefetch" href="/vue-press-docs/assets/js/34.53339129.js"><link rel="prefetch" href="/vue-press-docs/assets/js/35.368c2a62.js"><link rel="prefetch" href="/vue-press-docs/assets/js/36.593a1558.js"><link rel="prefetch" href="/vue-press-docs/assets/js/37.03b7eb3f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/38.119c7171.js"><link rel="prefetch" href="/vue-press-docs/assets/js/39.f3303696.js"><link rel="prefetch" href="/vue-press-docs/assets/js/4.0911b1c1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/40.a727a31c.js"><link rel="prefetch" href="/vue-press-docs/assets/js/41.df01778a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/42.24907559.js"><link rel="prefetch" href="/vue-press-docs/assets/js/43.f7efdd24.js"><link rel="prefetch" href="/vue-press-docs/assets/js/44.ed8a586a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/45.4153c8f6.js"><link rel="prefetch" href="/vue-press-docs/assets/js/46.38ee2887.js"><link rel="prefetch" href="/vue-press-docs/assets/js/47.fafe4e22.js"><link rel="prefetch" href="/vue-press-docs/assets/js/48.11cf3a32.js"><link rel="prefetch" href="/vue-press-docs/assets/js/49.9b4b506b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/5.30bb248a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/50.90535ee5.js"><link rel="prefetch" href="/vue-press-docs/assets/js/51.59a46172.js"><link rel="prefetch" href="/vue-press-docs/assets/js/52.34a795d5.js"><link rel="prefetch" href="/vue-press-docs/assets/js/53.b82f43b1.js"><link rel="prefetch" href="/vue-press-docs/assets/js/54.9a76148f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/55.75ac5779.js"><link rel="prefetch" href="/vue-press-docs/assets/js/56.afdafb93.js"><link rel="prefetch" href="/vue-press-docs/assets/js/57.769f07f9.js"><link rel="prefetch" href="/vue-press-docs/assets/js/58.91bd0e5b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/59.9b1b7a2b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/6.262368dc.js"><link rel="prefetch" href="/vue-press-docs/assets/js/60.79f7ba50.js"><link rel="prefetch" href="/vue-press-docs/assets/js/61.e2b3466d.js"><link rel="prefetch" href="/vue-press-docs/assets/js/62.25ae7055.js"><link rel="prefetch" href="/vue-press-docs/assets/js/63.1c398391.js"><link rel="prefetch" href="/vue-press-docs/assets/js/64.8fa35e00.js"><link rel="prefetch" href="/vue-press-docs/assets/js/65.6c8bf068.js"><link rel="prefetch" href="/vue-press-docs/assets/js/66.44daef8f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/67.66f09b37.js"><link rel="prefetch" href="/vue-press-docs/assets/js/68.6ffa134a.js"><link rel="prefetch" href="/vue-press-docs/assets/js/69.d547c1ee.js"><link rel="prefetch" href="/vue-press-docs/assets/js/7.fd046e46.js"><link rel="prefetch" href="/vue-press-docs/assets/js/70.c933e292.js"><link rel="prefetch" href="/vue-press-docs/assets/js/71.4170c744.js"><link rel="prefetch" href="/vue-press-docs/assets/js/72.759f4574.js"><link rel="prefetch" href="/vue-press-docs/assets/js/73.60ef846f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/74.bcd5ecfd.js"><link rel="prefetch" href="/vue-press-docs/assets/js/75.20843078.js"><link rel="prefetch" href="/vue-press-docs/assets/js/76.fc952e66.js"><link rel="prefetch" href="/vue-press-docs/assets/js/77.7dd7f97f.js"><link rel="prefetch" href="/vue-press-docs/assets/js/78.2650c24b.js"><link rel="prefetch" href="/vue-press-docs/assets/js/79.b8caa6ba.js"><link rel="prefetch" href="/vue-press-docs/assets/js/8.a8d31d14.js"><link rel="prefetch" href="/vue-press-docs/assets/js/80.4a4a3d20.js"><link rel="prefetch" href="/vue-press-docs/assets/js/81.86cec7de.js"><link rel="prefetch" href="/vue-press-docs/assets/js/9.179dc13a.js">
+    <link rel="stylesheet" href="/vue-press-docs/assets/css/0.styles.8e0a4dbf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press-docs/" class="home-link router-link-active"><img src="/vue-press-docs/hit.JPG" alt="不断进步" class="logo"> <span class="site-name can-hide">不断进步</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-press-docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/html/html.html" class="nav-link">
+  html系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/css/css.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  css系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/javaScript/Object.freeze()和const.html" class="nav-link">
+  javaScript系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/typeScript/base.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/http/http.html" class="nav-link">
+  http系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/project/guide.html" class="nav-link">
+  前端工程化系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/node/node.html" class="nav-link">
+  node系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/browser/browser.html" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework/nextTick.html" class="nav-link">
+  框架使用系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/framework-source/vue-source.html" class="nav-link">
+  框架源码系列
+</a></li><li class="dropdown-item"><!----> <a href="/vue-press-docs/pages/optimization/vue-code.html" class="nav-link">
+  性能优化系列
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Huhui-coder" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/css/css.html" aria-current="page" class="active sidebar-link">css</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/css/css.html#简述让一个元素在窗口中消失以及垂直水平居中的方法-还有flex布局的理解。" class="sidebar-link">简述让一个元素在窗口中消失以及垂直水平居中的方法，还有Flex布局的理解。</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/css/css.html#前言-什么是回流重绘" class="sidebar-link">前言-什么是回流重绘</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/css/css.html#回流" class="sidebar-link">回流</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/css/css.html#重绘" class="sidebar-link">重绘</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/css/css.html#垂直水平居中的办法" class="sidebar-link">垂直水平居中的办法</a></li></ul></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/css/css.html#如何使用css3-进行自适应和响应式布局" class="sidebar-link">如何使用css3 进行自适应和响应式布局</a></li><li class="sidebar-sub-header"><a href="/vue-press-docs/pages/css/css.html#绘制三角形-圆形和菱形" class="sidebar-link">绘制三角形，圆形和菱形</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>盒子模型</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/css/盒子模型.html" class="sidebar-link">盒子模型</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>flex</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/css/flex.html" class="sidebar-link">flex</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>grid</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/css/grid.html" class="sidebar-link">grid</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>css预处理器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-docs/pages/css/less.html" class="sidebar-link">less</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="简述让一个元素在窗口中消失以及垂直水平居中的方法-还有flex布局的理解。"><a href="#简述让一个元素在窗口中消失以及垂直水平居中的方法-还有flex布局的理解。" class="header-anchor">#</a> 简述让一个元素在窗口中消失以及垂直水平居中的方法，还有Flex布局的理解。</h2> <p>能使元素消失的方法有两种，分别是<code>display: none</code> 和 <code>visibility: hidden</code>以及<code>opacity: 0</code>
+扩展到<code>vue</code>框架的<code>v-if</code> 和 <code>v-show</code> 之间的区别:
+<code>v-if</code> 背后的原理就是用<code>display:none</code>实现的，是真正将DOM元素去掉了。
+而 <code>v-show</code> 背后的原理便是<code>visibility: hidden</code>,仅仅是将DOM元素隐藏掉了。
+搭配回流和重绘来讲解。如果是要频繁显示或隐藏的元素，推荐使用<code>v-show</code>.</p> <h3 id="前言-什么是回流重绘"><a href="#前言-什么是回流重绘" class="header-anchor">#</a> 前言-什么是回流重绘</h3> <p>浏览器使用流式布局模型 (Flow Based Layout)。
+浏览器会把HTML解析成DOM，把CSS解析成CSSOM，DOM和CSSOM合并就产生了Render Tree。
+有了RenderTree，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。
+由于浏览器使用流式布局，对Render Tree的计算通常只需要遍历一次就可以完成，但<strong>table</strong>及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要<strong>避免使用table布局</strong>的原因之一。</p> <p><strong>回流必将引起重绘，而重绘不一定会引起回流</strong></p> <h3 id="回流"><a href="#回流" class="header-anchor">#</a> 回流</h3> <blockquote><p>当Render Tree 中部分或全部元素的尺寸,结构，或某些属性发生改变时，浏览器重新渲染部分或者全部文档的过程叫做回流。
+下面的内容会导致回流</p></blockquote> <ul><li>页面首次渲染</li> <li>浏览器窗口发生改变</li> <li>元素的尺寸或位置发生改变</li> <li>元素内容变化(文字数量或图片大小等等)</li> <li>元素字体大小发生变化</li> <li>添加或者删除可见的DOM元素</li> <li>一些常用的且会导致回流的属性或方法
+<ul><li>clientWidth, clientHeight, clientTop, clientLeft</li> <li>offsetWidth、offsetHeight、offsetTop、offsetLeft</li> <li>scrollWidth、scrollHeight、scrollTop、scrollLeft</li> <li>scrollIntoView()、scrollIntoViewIfNeeded()</li> <li>getComputedStyle() 获取的是一个DOM元素实时的经过变化的css style 的集合对象， 可通过 getPropertyValue(props)获取到具体属性的值</li> <li>getBoundingClientRect() 方法返回元素的大小及其相对于视口的位置。返回的值有left, top, right, bottom, x, y, width, 和 height这几个以像素为单位的只读属性用于描述整个边框。除了width 和 height 以外的属性是相对于视图窗口的左上角来计算的。</li> <li>scrollTo()</li></ul></li></ul> <h3 id="重绘"><a href="#重绘" class="header-anchor">#</a> 重绘</h3> <blockquote><p>当页面中元素样式的改变并不影响它在文档流中的位置时（例如: color、background-color、visibility等），浏览器会将新样式赋予给元素并重新绘制它，这个过程称为重绘。</p></blockquote> <p>简单来说，就是不改变元素的位置，但是会改变元素的呈现形式，那么这个多半就是要重绘了。</p> <h4 id="回流和重绘对比"><a href="#回流和重绘对比" class="header-anchor">#</a> 回流和重绘对比</h4> <p><strong>回流比重绘的代价更高</strong></p> <p>有时候只是回流一个简单的元素，它的父元素以及任何跟随它的元素都会产生回流。</p> <h4 id="如何避免回流和重绘"><a href="#如何避免回流和重绘" class="header-anchor">#</a> 如何避免回流和重绘</h4> <h5 id="css"><a href="#css" class="header-anchor">#</a> CSS</h5> <p>避免使用table布局。
+尽可能在DOM树的最末端改变class。
+避免设置多层内联样式。
+将动画效果应用到position属性为absolute或fixed的元素上。
+避免使用CSS表达式（例如: calc()）。</p> <h5 id="javascript"><a href="#javascript" class="header-anchor">#</a> JavaScript</h5> <p>避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。
+避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。
+也可以先为元素设置display: none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。
+避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。
+对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。</p> <h3 id="垂直水平居中的办法"><a href="#垂直水平居中的办法" class="header-anchor">#</a> 垂直水平居中的办法</h3> <p>详情见本目录下的 14种方式实现水平垂直布局.html</p> <h4 id="总结"><a href="#总结" class="header-anchor">#</a> 总结:</h4> <h5 id="水平居中较为简单-共提供了7种方法"><a href="#水平居中较为简单-共提供了7种方法" class="header-anchor">#</a> 水平居中较为简单, 共提供了7种方法,</h5> <p>一般情况下 text-align:center,marin:0 auto; 足矣</p> <p>① text-align:center;
+② margin:0 auto;
+③ width:fit-content;
+④ flex
+⑥ transform 【一般用于不需要具体的宽度，高度直接使用百分比】
+⑦ ⑧ 两种不同的绝对定位方法 第一种: left: 50% margin-left: -0.5宽度 第一种: left:0;right:0;margin:0 auto;</p> <h5 id="垂直居中-共提供了7种方法"><a href="#垂直居中-共提供了7种方法" class="header-anchor">#</a> 垂直居中, 共提供了7种方法.</h5> <p>① 单行文本, line-height 等于height
+② 行内块级元素, 使用 display: inline-block, vertical-align: middle; 加上伪元素辅助实现
+③ vertical-align
+④ flex
+⑥ transform 【一般用于不需要具体的宽度，高度直接使用百分比】
+⑦ ⑧ 两种不同的绝对定位方法 第一种: top: 50% margin-left: -0.5高度 第一种: left:0;right:0;margin:auto 0;</p> <h2 id="如何使用css3-进行自适应和响应式布局"><a href="#如何使用css3-进行自适应和响应式布局" class="header-anchor">#</a> 如何使用css3 进行自适应和响应式布局</h2> <p>自适应是一套模板适应所有终端，但每种设备上看到的版式是一样的，俗称宽度自适应。</p> <ul><li><p>使用 <code>flexlib</code> 淘宝自适应解决方案。其原理就是设置默认的根字体 root font-size 的大小，然后 监听 浏览器的缩放时间，再根据浏览的视口宽高动态的去改变 root font-size。页面中的css 单位都用rem 来设置，从而达到自适应的效果。
+缺点： 1.会有不能整除的情况，会有小数点出现，所以这个方案产生的结果并不是很精确。
+2.由于是监听的浏览器缩放( window.addEventListener('resize', setRemUnit))事件，是属于触发频率比较高的时间，在正式使用时还要注意使用防抖，节流。以此来节省性能。</p></li> <li><p>使用 vw css 单位, flex 布局方法来实现自适应。
+不用写额外的js 代码。简单好用。</p></li></ul> <p>响应式布局是一套模板适应所有终端，但每种设备看到的版式可以是不一样的。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>@<span class="token function">media</span> <span class="token punctuation">(</span>orientation<span class="token operator">:</span>portrait<span class="token punctuation">)</span> <span class="token function">and</span> <span class="token punctuation">(</span><span class="token parameter">max<span class="token operator">-</span>width<span class="token operator">:</span><span class="token number">460</span>px</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">.</span>video <span class="token punctuation">.</span>innerBox <span class="token punctuation">.</span>news a<span class="token punctuation">.</span>more <span class="token punctuation">{</span>
+display<span class="token operator">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>video <span class="token punctuation">.</span>innerBox <span class="token punctuation">.</span>news span <span class="token punctuation">{</span>
+display<span class="token operator">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>video <span class="token punctuation">.</span>innerBox <span class="token punctuation">.</span>news <span class="token punctuation">{</span>
+width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>video <span class="token punctuation">.</span>innerBox <span class="token punctuation">.</span>news ul <span class="token punctuation">{</span>
+width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+text<span class="token operator">-</span>align<span class="token operator">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="绘制三角形-圆形和菱形"><a href="#绘制三角形-圆形和菱形" class="header-anchor">#</a> 绘制三角形，圆形和菱形</h2> <p>绘制三角形</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">// 使用 border 来实现，width设置为0, 一边的border 为有颜色，三边的border 为 透明色。三角形。
+div</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 40px solid<span class="token punctuation">;</span>
+    <span class="token property">border-color</span><span class="token punctuation">:</span> transparent transparent red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>绘制圆形</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code>// 使用 <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span> <span class="token selector">来实现。圆形。
+.circle</span> <span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> 
+	<span class="token comment">/* 宽度和高度需要相等 */</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>绘制菱形</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">// 使用两个元素来实现，大体思路就是给父元素设置宽高，并且`overflow: hidden`,再旋转45度、
+// 子元素宽度设置跟父元素一样的，往反方向旋转45度。
+.picture</span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">img</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">11/14/2020, 9:43:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/vue-press-docs/pages/css/盒子模型.html">
+        盒子模型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vue-press-docs/assets/js/app.d8725ef0.js" defer></script><script src="/vue-press-docs/assets/js/2.a05206b7.js" defer></script><script src="/vue-press-docs/assets/js/15.e3c8b020.js" defer></script>
+  </body>
+</html>
