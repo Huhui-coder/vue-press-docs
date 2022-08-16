@@ -31,9 +31,7 @@ module.exports = {
                     { text: '框架使用系列', link: '/pages/framework/nextTick.md' },
                     { text: '框架源码系列', link: '/pages/framework-source/vue-source.md' },
                     { text: '性能优化系列', link: '/pages/optimization/vue-code.md' },
-                    { text: '前端做直播', link: '/pages/live/live.md' },
                     // { text: '学习计划', link: '/pages/study/todo.md' },
-
                     // { text: '199管理类联考', link: '/pages/management/math.md' },
                 ]
             },
@@ -119,6 +117,13 @@ module.exports = {
                     ['specification.md', '项目配置'],
                     ['webpack.md', 'webpack']
                 ]
+            },{
+                title: '微前端', // 必要的
+                collapsable: true, // 可选的, 默认值是 true,
+                sidebarDepth: 10, // 可选的, 默认值是 1
+                children: [
+                    ['microApp.md', '落地实践'],
+                ]
             }],
             '/pages/javaScript/': [
                 {
@@ -181,6 +186,14 @@ module.exports = {
                     sidebarDepth: 10, // 可选的, 默认值是 1
                     children: [
                         ['inherit.md', '实现继承']
+                    ]
+                },
+                {
+                    title: '实现设计模式系列', // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 10, // 可选的, 默认值是 1
+                    children: [
+                        ['eventBus.md', '实现EventBus事件模式']
                     ]
                 }
             ],
@@ -255,14 +268,6 @@ module.exports = {
                     ]
                 }
             ],
-            '/pages/live/': [{
-                title: 'live', // 必要的
-                collapsable: true, // 可选的, 默认值是 true,
-                sidebarDepth: 10, // 可选的, 默认值是 1
-                children: [
-                    ['live.md', 'live']
-                ]
-            }],
             '/pages/study/': [{
                 title: 'todo', // 必要的
                 collapsable: true, // 可选的, 默认值是 true,
@@ -272,12 +277,17 @@ module.exports = {
                     ['cq.md', 'ChongQing']
                 ]
             }],
-            '/pages/ts/': [{
-                title: 'base', // 必要的
+            '/pages/typeScript/': [{
+                title: 'TypeScript', // 必要的
                 collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 10, // 可选的, 默认值是 1
                 children: [
-                    ['base.md', 'base']
+                    ['base.md', '基本'],
+                    ['dataType.md', '数据类型'],
+                    ['assertion.md', '断言'],
+                    ['typeGuard.md', '类型守卫'],
+                    ['condition.md', '条件'],
+                    ['advanced.md', '高级类型']
                 ]
             }],
             '/pages/management/': [{

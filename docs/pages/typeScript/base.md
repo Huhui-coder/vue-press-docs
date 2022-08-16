@@ -145,8 +145,8 @@ interface Name {
 let name: Name;
 
 name = {
-  first: "John",
-  second: "Doe",
+  first: 'John',
+  second: 'Doe',
 };
 ```
 
@@ -158,8 +158,8 @@ let name: {
   second: string;
 };
 name = {
-  first: "John",
-  second: "Doe",
+  first: 'John',
+  second: 'Doe',
 };
 
 // 当你需要多次使用相同的内联注解时，你可以将其重构为一个接口。
@@ -181,6 +181,7 @@ str = undefined;
 ```
 
 - void
+
 ```ts
 function log(message: string): void {
   console.log(message);
